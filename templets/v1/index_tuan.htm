@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<link href="/favicon.ico" rel="shortcut icon" />
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//搜索框
+	$("#cardname").addClass("cardnameV");
+	$("#cardname").focus(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	$("#cardname").keyup(function() {
+		$(this).removeClass("cardnameV");
+	})
+	$("#cardname").blur(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	
+	//导航
+	$(".mainProNav dl dt").mouseover(function() {
+		$(".mainProNav dl").removeClass("dlHover");
+		$(this).parent().addClass("dlHover");
+	})
+	$(".mainProNav").hover(function() {
+		$(this).addClass("mainProNavHover");
+	},function() {
+		$(this).removeClass("mainProNavHover");
+		$(".mainProNav dl").removeClass("dlHover");
+	})
+	
+});
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+  $(function () {
+    $(".top").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
+    $(".bottom").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: document.body.clientHeight }, 700);
+    });
+  })
+</script>
+{dede:include filename="header.htm"/}
+
+<!--导航g--> 
+<script type="text/javascript" src="/skin/js/jquery.js"></script> 
+<script type="text/javascript" src="/skin/js/jcarousellite_1.0.1.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jqlcm.js"></script> 
+<!--导航e-->
+
+{dede:include filename="nav.htm"/}
+<div class="nynewsA">
+    <div class="nynewsAleft"> {dede:field name='position'/} </div>
+    <div class="nynewsAright">
+      <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <input type="hidden" name="typeid" value="1">
+            <input type="hidden" name="kwtype" value="0" />
+        <span>
+        <input type="text" value="请输入楼盘名或楼盘地址" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" id="q" name="q" class="nynewsArightinput">
+        </span> <em>
+        <input type="submit" value="搜索" class="nynewsArightinput3" name="">
+        </em>
+      </form>
+    </div>
+  </div>
+<div class="nyhouse"> 
+  
+  <!--团购左侧开始-->
+  <div class="nytuangou">
+    <div class="nytuangouB"> 
+      
+      <!--单元：团购列表开始-->
+      {dede:arclist typeid='1' flag='f'  titlelen='50' orderby='pubdate' addfields='tmaidian,junjia,zlhuxing,loupanleixing,slctel' channelid='2'}       
+      <div class="groupItem"> <a href="[field:arcurl/]" target="_blank">
+        <div class="groupPic"><img src="[field:litpic/]" width="460" height="280"></div>
+        <div class="groupData">
+          <h2>[field:title/]</h2>
+          <h3>[field:zlhuxing/]</h3>
+          <h4><b>[field:junjia/]</b>&nbsp;元/平米</h4>
+          <h5>已有<b>[field:click/]</b>人关注</h5>
+          <h6><span><b>[field:slctel/]</b><em class="orange">查看详情</em></span></h6>
+        </div>
+        </a> </div>
+      {/dede:arclist}    
+
+      <!--单元：团购列表结束--> 
+      
+      
+    </div>
+  </div>
+  <!--团购左侧开始--> 
+  
+  <!--新房右侧开始-->
+  <div class="nyhouseright">
+    <div class="groupPhone"> <span><img src="/skin/img/ico48.png"/>服务热线</span> <span>{dede:global.cfg_tels/}</span> <em>工作时间：周一到周日24小时</em> </div>
+    <div class="groupSservice">
+      <h3>团购服务中心</h3>
+      <ul>
+        <li><img src="/skin/img/ico49.png"/><br/>
+          免费接机</li>
+        <li><img src="/skin/img/ico50.png"/><br/>
+          旅游看房</li>
+        <li><img src="/skin/img/ico51.png"/><br/>
+          置业顾问</li>
+      </ul>
+    </div>
+    <div class="sideNewHouse">
+      <div class="sideNewHousedt"><img src="/skin/img/ico27.png"/>热销楼盘</div>
+      <div class="sideNewHousedd">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='click' flag='c' row='10' addfields='junjia' channelid='2' typeid='1'}    
+            <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+          {/dede:arclist}    
+        </ul>
+      </div>
+    </div>
+    <div class="sideNewHouse mgb20">
+      <div class="sideNewHousedt"><img src="/skin/img/ico28.png"/>大家都在看</div>
+      <div class="sideNewHousedd">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='click' row='10' addfields='junjia' channelid='2' typeid='1'}    
+            <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+          {/dede:arclist}  
+        </ul>
+      </div>
+    </div>
+    <div class="nynewsBrightD">
+      <p><b>手机or微信扫一扫</b><br/>
+        海南楼盘随身带</p>
+      <samp><img src="/skin/img/ewm.png"/></samp> <span>咨询热线</span> <em><img src="/skin/img/ico29.png"/>&nbsp;&nbsp;0898-66270170</em> </div>
+  </div>
+  <!--新房右侧结束--> 
+  
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

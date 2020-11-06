@@ -1,0 +1,39 @@
+<div class="ind_dh">
+  <div class="ind_b_dh">
+    <div class="kxdh">快速找工业厂房
+      <ol class="kxdh_ol">
+        <div class="kxdh_ol_div">
+          <h3><a href="#">热门区域</a></h3>
+          <ul class="kxdh_ol_div_ul">
+            {dede:channel type='son' typeid='1' }
+           <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+          {/dede:channel} 
+          </ul>
+        </div>
+        {dede:php} AddFilter(2,2,'jiagequjian'); {/dede:php}
+        {dede:php} AddFilter(2,2,'loupanleixing'); {/dede:php}
+
+      </ol>
+    </div>
+    <div class="mainMenuV"> 
+    <a href="/" {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='active'":@me="";{/dede:field}>首页</a> 
+    {dede:channelartlist typeid='top' currentstyle='active'}
+    <a href="{dede:field name='typeurl'/}" class="{dede:field.currentstyle/}">{dede:field name='typename'/}</a>
+    {/dede:channelartlist} 
+    </div>
+    <div class="selCity">
+      <div class="selBox">
+        <div id="txtbox" class="selTxt"><span>郑州市</span><em>切换</em></div>
+      </div>
+      <div id="optionbox" class="optionbox" style="display: none;">
+        <div> 
+        {dede:channel type='son' typeid='1' }
+        <span><a href="[field:typeurl/]">[field:typename/]</a></span> 
+        {/dede:channel}
+        <ins id="ico-city"></ins> </div>
+      </div>
+      <input type="hidden" id="selValue">
+    </div>
+    <script type="text/javascript" src="/skin/js/roll.js"></script> 
+  </div>
+</div>

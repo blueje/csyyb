@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<link href="/favicon.ico" rel="shortcut icon" />
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//搜索框
+	$("#cardname").addClass("cardnameV");
+	$("#cardname").focus(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	$("#cardname").keyup(function() {
+		$(this).removeClass("cardnameV");
+	})
+	$("#cardname").blur(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	
+	//导航
+	$(".mainProNav dl dt").mouseover(function() {
+		$(".mainProNav dl").removeClass("dlHover");
+		$(this).parent().addClass("dlHover");
+	})
+	$(".mainProNav").hover(function() {
+		$(this).addClass("mainProNavHover");
+	},function() {
+		$(this).removeClass("mainProNavHover");
+		$(".mainProNav dl").removeClass("dlHover");
+	})
+	
+});
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+  $(function () {
+    $(".top").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
+    $(".bottom").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: document.body.clientHeight }, 700);
+    });
+  })
+</script> 
+{dede:include filename="header.htm"/} 
+
+<!--导航g--> 
+<script type="text/javascript" src="/skin/js/jquery.js"></script> 
+<script type="text/javascript" src="/skin/js/jcarousellite_1.0.1.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jqlcm.js"></script> 
+<!--导航e--> 
+
+{dede:include filename="nav.htm"/}
+<div class="about">
+  <div class="aboutA"> 
+  {dede:channel type='son' row='5'  currentstyle="<span ><a href='~typelink~' id='aboutAon'>~typename~</a> </span>" }
+  <span><a href="[field:typeurl/]">[field:typename/]</a></span> 
+  {/dede:channel}
+  </div>
+  <div class="wenzhangbox">
+    <div class="aboutB">
+      {dede:field name='content'/}
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<link href="/favicon.ico" rel="shortcut icon" />
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//搜索框
+	$("#cardname").addClass("cardnameV");
+	$("#cardname").focus(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	$("#cardname").keyup(function() {
+		$(this).removeClass("cardnameV");
+	})
+	$("#cardname").blur(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	
+	//导航
+	$(".mainProNav dl dt").mouseover(function() {
+		$(".mainProNav dl").removeClass("dlHover");
+		$(this).parent().addClass("dlHover");
+	})
+	$(".mainProNav").hover(function() {
+		$(this).addClass("mainProNavHover");
+	},function() {
+		$(this).removeClass("mainProNavHover");
+		$(".mainProNav dl").removeClass("dlHover");
+	})
+	
+});
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+  $(function () {
+    $(".top").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
+    $(".bottom").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: document.body.clientHeight }, 700);
+    });
+  })
+</script>
+{dede:include filename="header.htm"/}
+
+<!--导航g--> 
+<script type="text/javascript" src="/skin/js/jquery.js"></script> 
+<script type="text/javascript" src="/skin/js/jcarousellite_1.0.1.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jqlcm.js"></script> 
+<!--导航e-->
+
+{dede:include filename="nav.htm"/}
+<div class="nyhouse">
+  <div class="nyhouseleft"> 
+    
+    <!--快捷搜索：开始-->
+    <div class="nyhousescreen">
+      
+      <div class="nyhousescreenB">
+        <div class="nyhousescreenBx"> <strong>热门区域</strong> <em> <a href="{dede:field.typeid function="gettoptype(@me,link)"/}" {dede:field name=typeid runphp="yes"}(@me=="1")? @me=" class='current' ":@me="";{/dede:field}>不限</a> </em>
+          <div class="nyhousescreenBxRoll"> 
+          {dede:channel type='son' currentstyle="<span><a href='~typelink~' class='current'>~typename~</a> </span>" }
+          <span><a href="[field:typeurl/]" >[field:typename/] </a></span>  
+          {/dede:channel}
+         </div>
+        </div>
+        {dede:php} AddFilter(2,1,'jiagequjian'); {/dede:php} 
+        {dede:php} AddFilter(2,1,'loupanleixing'); {/dede:php}
+        
+      </div>
+      <div class="nyhousescreenC"> 
+      <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        <input type="hidden" name="typeid" value="1">
+        <input type="hidden" name="kwtype" value="0" />
+        <span>
+        <input name="q" id="q"  type="text" value="请输入工业厂房名称" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};"class="nyhousescreenCinput">
+        </span> <em>
+        <input type="submit" value="搜索" class="nyhousescreenCinput3" name="">
+        </em>
+        </form>
+        <h2><a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}">在线咨询</a></h2>
+      </div>
+    </div>
+    <!--快捷搜索：结束-->
+    <div class="nyhouseBox"> 
+      <!--工具栏：开始-->
+      <div class="nyhouseTool">
+        <div class="nyhouseTool_left"> <span class="current"><a><img src="/skin/img/ico17.png"/>全部厂房</a></span></div>
+        <div class="demo">
+          <dl class="select">
+            <dt>本网共合作<strong style="color:#ff0000">{dede:sql sql="select count(ID) as c from dede_archives where channel=2"}[field:c /]{/dede:sql}</strong>个工业厂房信息/dt>
+          </dl>
+        </div>
+      </div>
+      <!--工具栏：结束--> 
+      <!--列表B：开始-->
+      <div class="houseListA"> 
+        <!--单元：列表显示开始-->
+        {dede:list pagesize='9'} 
+        <div class="houseListItem">
+          <div class="hiLeft"> <a target="_blank" href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" width="287px" height="187" title="[field:title/]" alt="[field:title/]"></a> </div>
+          <div class="hiRight">
+            <div class="hiRight_top">
+              <h2><a target="_blank" href="[field:arcurl/]">[field:title/]<b>  [[field:typename/]]</b></a></h2>
+              <div class="nyimgShop"> <span> <a href="[field:arcurl/]" class="zhuangtai" style=" text-decoration:none; color:#fff;">在售</a> 
+                </span> <span><a target="_blank" href="[field:arcurl/]" title="浏览" rel="nofollow"><img src="/skin/img/ico9.png"/>[field:click/]</a></span> <span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" title="咨询"><img src="/skin/img/ico11.png"/>咨询</a></span> </div>
+            </div>
+            <dl>
+              <dd><em><img src="/skin/img/ico20.png"/>位置：</em><span>[field:lopandizhi/]</span></dd>
+              <dd> <em><img src="/skin/img/ico21.png"/>户型：</em><span><a href="[field:arcurl/]">[field:zlhuxing/]</a> <a href="[field:arcurl/]"></a> </span> </dd>
+              <dt>  </dt>
+              <dd><em><img src="/skin/img/ico22.png"/></em><span><strong style="color:#ff0000">楼盘热线：18595528363</strong></span></dd>
+              <p><a href="[field:arcurl/]"> [field:loupanleixing/]</a></p>
+            </dl>
+            <ul>
+              <li>开盘价：<b>[field:qijia/]元/㎡</b></li>
+              <li>均价：<b>[field:junjia/]元/㎡</b></li>
+            </ul>
+          </div>
+        </div>
+        {/dede:list} 
+        <!--单元：列表显示结束--> 
+        <!--单元：模块显示结束--> 
+        <!--翻页：开始----->
+        <div class="digg"> {dede:pagelist listitem="pre,next,pageno,index,end" listsize="5"/}</div>
+        <!--翻页：结束-----> 
+        
+      </div>
+      <!--列表B：结束--> 
+      
+    </div>
+  </div>
+  
+  <!--新房右侧开始-->
+  <div class="nyhouseright"> 
+    
+    <!--11-->
+    <div class="houseSv"> 
+    <span><a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}" target="_blank"><img src="/skin/img/ico26.png"/><em>在售楼盘报价及折扣</em>实时更新</a></span> 
+    <span><a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}" target="_blank"><img src="/skin/img/ico5.png"/><em>每日成交数据</em>成交数据统计，楼市走势动态</a></span> 
+    <span><a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}" target="_blank"><img src="/skin/img/ico7.png"/><em>环岛联动，旅游看房</em>免费接机，独享优惠折扣</a></span> 
+    <span><a href="http://wpa.qq.com/msgrd?v=3&site={dede:global.cfg_webname/}&menu=yes&uin={dede:global.cfg_kfqq/}" target="_blank"><img src="/skin/img/ico6.png"/><em>提交购房需求</em>置业顾问帮您寻找优质房源</a></span> </div>
+    <!--11-->
+    
+    <div class="sideNewHouse">
+      <div class="sideNewHousedt"><img src="/skin/img/ico27.png"/>热销厂房</div>
+      <div class="sideNewHousedd">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='click' flag='c' row='10' addfields='junjia' channelid='2' typeid='1'}    
+          <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+          {/dede:arclist}  
+        </ul>
+      </div>
+    </div>
+    <div class="sideNewHouse mgb20">
+      <div class="sideNewHousedt"><img src="/skin/img/ico28.png"/>大家都在看</div>
+      <div class="sideNewHousedd">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='click' row='10' addfields='junjia' channelid='2' typeid='1'}    
+          <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+          {/dede:arclist} 
+        </ul>
+      </div>
+    </div>
+    
+    <!--33-->
+    
+    <div class="sideFix">
+      <div class="sideFixA">
+        <dt><img src="/skin/img/ico29.png"/>咨询热线</dt>
+        <dd>{dede:global.cfg_tels/}</dd>
+      </div>
+      <div class="sideFixB">
+        <dt><img src="/skin/img/ico30.png"/>报名参加团购厂房</dt>
+        <dd>
+          <ul>
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="forms" id="forms">
+                <input type="hidden" name="action" value="post" />
+                <input type="hidden" name="diyid" value="1" />
+                <input type="hidden" name="do" value="2" />
+              <li><b>姓  名</b>
+                <input type="text" value="请输入姓名*" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" id="bm_fmname" name="bm_fmname" class="input1">
+              </li>
+              <li><b>电  话</b>
+                <input type="text" value="请输入手机号码" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" id="bm_fmtel" name="bm_fmtel" class="input1">
+              </li>
+              <input type="hidden" name="required" value="bm_fmname,bm_fmtel" />
+              <input type="hidden" name="mytime" id="mytime">
+              <input type="hidden" name="dede_fields" value="bm_fmname,text;bm_fmtel,text;bm_fmbeizhu,multitext;mytime,text;dytime,text">
+              <input type="hidden" name="dede_fieldshash" value="85e2a498b370e32e6234a487cca8f75c">
+              <li>
+                <input type="submit" value="确认提交" class="input3" name="">
+              </li>
+            </form>
+          </ul>
+        </dd>
+        <span><img src="/skin/img/ico31.png"/>报名即可享受免费接机！</span> <span><img src="/skin/img/ico31.png"/>全程免费，享受独家优惠。</span> </div>
+    </div>
+    <!--33--> 
+    
+  </div>
+  <!--新房右侧结束--> 
+  
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

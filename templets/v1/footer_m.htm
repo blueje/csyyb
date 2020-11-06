@@ -1,0 +1,111 @@
+<!--wrap6 start-->
+
+<div class="wrap6 bai"> {dede:global.cfg_powerby/}<br/>
+</div>
+<!--wrap5 start-->
+<div id="wrap11">
+  <div class="wrap11">
+    <div class="diva bai"><a href="tel:{dede:global.cfg_tels/}">咨询电话：<br/>
+      {dede:global.cfg_tels/}</a></div>
+    <div class="divb">
+      <dd><a href="#" data-dialogc="somedialogc"><img src="/m/skin/img/ico90.png"/>报名看工业厂房</a></dd>
+      <dd><a href="tel:{dede:global.cfg_tels/}"><img src="/m/skin/img/ico230.png"/>在线咨询</a></dd>
+    </div>
+  </div>
+</div>
+<div id="somedialogc" class="dialog" style="z-index:9999">
+  <div class="dialog__overlay"></div>
+  <div class="dialog__content">
+    <div class="closea"><a href="#" data-dialog-close><img src="/m/skin/img/close.png"></a></div>
+    <h2>您要报名看的工业厂房是<br/>
+    </h2>
+    <h3>已有<b></b>人报名</h3>
+    <div class="regist_form">
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="forms" id="forms">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <li>
+          <input name="bm_fmname" type="text" class="input_text_x" value="请输入姓名*"  onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" />
+        </li>
+        <li>
+          <input name="bm_fmtel" type="text" class="input_text_x"  value="请输入手机号码*"  onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};"/>
+        </li>
+        <li>
+          <input name="" type="submit" class="btn_x" value="立即报名看工业厂房" />
+        </li>
+        <input type="hidden" name="required" value="bm_fmname,bm_fmtel" />
+        <input type="hidden" name="dede_fields" value="bm_fmname,text;bm_fmtel,text;bm_fmbeizhu,multitext;mytime,text;dytime,text" />
+        <input type="hidden" name="dede_fieldshash" value="85e2a498b370e32e6234a487cca8f75c" />
+      </form>
+      <script>
+                    function gosubmit(){
+						forms.submit();
+					}
+                    </script> 
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function() {
+
+    var dlgtrigger = document.querySelector( '[data-dialogC]' ),
+        somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialogC' ) ),
+        dlg = new DialogFx( somedialogc );
+
+    dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+})();
+</script>
+<div id="wrap11">
+  <div class="wrap11">
+    <div class="diva bai"><a href="tel:{dede:global.cfg_tels/}‬">咨询电话：<br/>
+      {dede:global.cfg_tels/}</a></div>
+    <div class="divb">
+      <dd><a href="#" data-dialoga="somedialoga"><img src="/m/skin/img/ico90.png"/>报名看房</a></dd>
+      <dd><a href="tel:{dede:global.cfg_tels/}"><img src="/m/skin/img/ico230.png"/>在线咨询</a></dd>
+    </div>
+  </div>
+</div>
+<div id="somedialoga" class="dialog" style="z-index:9999">
+  <div class="dialog__overlay"></div>
+  <div class="dialog__content">
+    <div class="closea"><a href="#" data-dialog-close><img src="/m/skin/img/close.png"></a></div>
+    <h2>报名看工业厂房</h2>
+    <div class="regist_form">
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="forms" id="forms">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <li>
+          <input name="bm_fmname" type="text" class="input_text_x" value="请输入姓名*"  onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" />
+        </li>
+        <li>
+          <input name="bm_fmtel" type="text" class="input_text_x" value="请输入手机号码*"  onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" />
+        </li>
+        <li>
+          <input name="" type="submit" class="btn_x" value="立即报名看工业厂房" />
+        </li>
+        <input type="hidden" name="required" value="bm_fmname,bm_fmtel" />
+        <input type="hidden" name="dede_fields" value="bm_fmname,text;bm_fmtel,text;bm_fmbeizhu,multitext;mytime,text;dytime,text" />
+        <input type="hidden" name="dede_fieldshash" value="85e2a498b370e32e6234a487cca8f75c" />
+      </form>
+      <script>
+                    function gosubmit(){
+						forms.submit();
+					}
+                    </script> 
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function() {
+
+    var dlgtrigger = document.querySelector( '[data-dialogA]' ),
+        somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialogA' ) ),
+        dlg = new DialogFx( somedialoga );
+
+    dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+})();
+</script>

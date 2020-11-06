@@ -1,0 +1,23 @@
+<div class="go"> <a title="返回顶部" class="top"></a> <a title="返回底部" class="bottom"></a> </div>
+<div class="top_box">
+  <div class="top">
+    <div class="logo"><a href="/"><img src="/skin/img/logo.png"/></a></div>
+    <div class="sousuo">
+      <dt>
+        <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <input type="hidden" name="typeid" value="1">
+            <input type="hidden" name="kwtype" value="0" />
+          <span>
+          <input type="text"  name='q' id="q" onfocus="if(this.value==this.defaultValue){this.value='';};"  onblur="if(this.value==''){this.value=this.defaultValue;}" value="请输入要搜索的工业厂房关键词" class="ss_wbk"/>
+          </span> <em>
+          <input name="" type="submit" value="搜 索" class="coolbg2"/>
+          </em>
+        </form>
+      </dt>
+      <dd> 热门搜索： {dede:hotwords num='5' subday='365' maxlength='16' /}  </dd>
+      <h2>共有<b>{dede:sql sql="select count(ID) as c from dede_archives where channel=2"}[field:c /]{/dede:sql}</b>个工业厂房信息供您查询参考！</h2>
+    </div>
+    <div class="phone"><em>全国免费咨询</em><span><a href="tel:{dede:global.cfg_tels/}">{dede:global.cfg_tels/}</a></span></div>
+    <div class="zhaofang"> <span><img src="/skin/img/ico2.png"/><a href="/m">手机找房</a></span>  </div>
+  </div>
+</div>

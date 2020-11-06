@@ -1,0 +1,359 @@
+﻿/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+@charset "utf-8";
+/* CSS Document */
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, span, em, form, fieldset, legend, input, textarea, button {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 0.24rem;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	font-family: "微软雅黑", Arial, Verdana, Geneva, sans-serif;
+}
+html {
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑", Arial, Verdana, Geneva, sans-serif;
+	font-size: 0.24rem;
+	outline: 0;
+	-webkit-text-size-adjust: none;
+	overflow-x: hidden;
+	color: #444;
+}
+body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	background: #f6f6f6;
+	overflow-x: hidden;
+}
+a:link {
+	color: #444;
+	text-decoration: none;
+}
+a:visited {
+	color: #444;
+	text-decoration: none;
+}
+a:hover {
+	color: #02a75b;
+	text-decoration: none;
+}
+.bai a:link {
+	color: #fff;
+	text-decoration: none;
+}
+.bai a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.bai a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+ul, li {
+	list-style: none
+}
+i {
+	font-style: normal
+}
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
+}
+.fl {
+	float: left;
+	display: inline;
+}
+.fr {
+	float: right;
+	display: inline;
+}
+.w {
+	width: 100%;
+}
+/*左边距*/
+.ml5 {
+ margin-left:.05rem;
+}
+.ml8 {
+ margin-left:.08rem;
+}
+.ml10 {
+ margin-left:.1rem;
+}
+.ml15 {
+ margin-left:.15rem;
+}
+.ml18 {
+ margin-left:.18rem;
+}
+.ml20 {
+ margin-left:.2rem;
+}
+.ml25 {
+ margin-left:.25rem;
+}
+.ml30 {
+ margin-left:.3rem;
+}
+.ml35 {
+ margin-left:.35rem;
+}
+.ml40 {
+ margin-left:.4rem;
+}
+.ml45 {
+ margin-left:.45rem;
+}
+.ml60 {
+ margin-left:.6rem;
+}
+.ml65 {
+ margin-left:.65rem;
+}
+.ml110 {
+	margin-left: 1.1rem;
+}
+.ml140 {
+	margin-left: 1.4rem;
+}
+.ml180 {
+	margin-left: 1.8rem;
+}
+/*上边距*/
+
+.mt5 {
+ margin-top:.05rem;
+}
+.mt8 {
+ margin-top:.08rem;
+}
+.mt10 {
+ margin-top:.1rem;
+}
+.mt12 {
+ margin-top:.12rem;
+}
+.mt15 {
+ margin-top:.15rem;
+}
+.mt18 {
+ margin-top:.18rem;
+}
+.mt20 {
+ margin-top:.2rem;
+}
+.mt25 {
+ margin-top:.25rem;
+}
+.mt30 {
+ margin-top:.3rem;
+}
+.mt35 {
+ margin-top:.35rem;
+}
+.mt40 {
+ margin-top:.4rem;
+}
+.mt50 {
+ margin-top:.5rem;
+}
+.mt60 {
+ margin-top:.6rem;
+}
+.mt70 {
+ margin-top:.7rem;
+}
+.mt65 {
+ margin-top:.65rem;
+}
+.mt100 {
+	margin-top: 1rem;
+}
+/*右边距*/
+.mr4 {
+ margin-right:.04rem;
+}
+.mr5 {
+ margin-right:.05rem;
+}
+.mr10 {
+ margin-right:.1rem;
+}
+.mr15 {
+ margin-right:.15rem;
+}
+.mr20 {
+ margin-right:.2rem;
+}
+.mr25 {
+ margin-right:.25rem;
+}
+.mr30 {
+ margin-right:.3rem;
+}
+.mr40 {
+ margin-right:.4rem;
+}
+.mr50 {
+ margin-right:.5rem;
+}
+.mr60 {
+ margin-right:.6rem;
+}
+.mr80 {
+ margin-right:.8rem;
+}
+/*外下边距*/
+.mb10 {
+	margin-bottom: 0.1rem;
+}
+.mb20 {
+	margin-bottom: 0.2rem;
+}
+.mb30 {
+	margin-bottom: 0.3rem;
+}
+.mb60 {
+	margin-bottom: 0.6rem;
+}
+.mb100 {
+	margin-bottom: 1rem;
+}
+.mb110 {
+	margin-bottom: 1.1rem;
+}
+.mb300 {
+	margin-bottom: 3rem;
+}
+/*内左边距*/
+.pl30 {
+	padding-left: 0.3rem;
+}
+/*内右边距*/
+.pr30 {
+	padding-right: 0.3rem;
+}
+/*内上边距*/
+.pt20 {
+	padding-top: 0.2rem;
+}
+.pt25 {
+	padding-top: 0.25rem;
+}
+.pt30 {
+	padding-top: 0.3rem;
+}
+.pt50 {
+	padding-top: 0.5rem;
+}
+.pt60 {
+	padding-top: 0.6rem;
+}
+.pt70 {
+	padding-top: 0.7rem;
+}
+.pt80 {
+	padding-top: 0.8rem;
+}
+/*内下边距*/
+.pb15 {
+	padding-bottom: 0.15rem;
+}
+.pb20 {
+	padding-bottom: 0.2rem;
+}
+.pb25 {
+	padding-bottom: 0.25rem;
+}
+.pb40 {
+	padding-bottom: 0.4rem;
+}
+.pb50 {
+	padding-bottom: 0.5rem;
+}
+.pb60 {
+	padding-bottom: 0.6rem;
+}
+.pb70 {
+	padding-bottom: 0.7rem;
+}
+.pb80 {
+	padding-bottom: 0.8rem;
+}
+.pb100 {
+	padding-bottom: 1rem;
+}
+.pb110 {
+	padding-bottom: 1.1rem;
+}
+.pb130 {
+	padding-bottom: 1.3rem;
+}
+.pb140 {
+	padding-bottom: 1.4rem;
+}
+/*透明度*/
+.tmd3 {
+	background: url(../img/3.png) repeat !important;
+}
+.tmd5 {
+	background: url(../img/5.png) repeat !important;
+}
+.tmd8 {
+	background: url(../img/8.png) repeat !important;
+}
+.tmd9 {
+	background: url(../img/9.png) repeat !important;
+}
+/*上边框*/
+.bdt20 {
+	border-top: 0.2rem #f0f2f5 solid;
+}
+/*右边框*/
+.bdr2 {
+	border-right: 0.02rem #dedcdc solid;
+}
+/*下边框*/
+.bdb1 {
+	border-bottom: 0.01rem #e5e5e5 solid;
+}
+/*上边框虚线*/
+.bdtx1 {
+	border-top: 0.01rem #eeeeee dashed;
+}
+/*竖线*/
+.linea {
+ width:.1rem;
+ height:.75rem;
+	background: #12b7f5;
+}
+/*标题分类*/
+.tt2 {
+	font-size: 0.28rem;
+	color: #636363;
+ margin-left:.2rem;
+ line-height:.75rem;
+}
+/*椭圆包含数字*/
+.sz2 {
+	padding: 0.02rem 0.15rem;
+	border-radius: 0.18rem;
+	font-size: 0.24rem;
+	color: #fff;
+}
+/*背景颜色*/
+.bgys1 {
+	background: #f5f5f5;
+}
+.bgys3 {
+	background: #12b7f5;
+}
+.bgys4 {
+	background: #979797;
+}
+.bgys5 {
+	background: #11b7f5;
+}

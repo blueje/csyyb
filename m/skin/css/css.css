@@ -1,0 +1,2321 @@
+﻿/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+@charset "utf-8";
+/* CSS Document */
+
+
+input[type=text], input[type=password], input[type=button], input[type=submit], input[type=file], button {
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+{
+-webkit-appearance: none;
+}
+.topbox {
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	position: fixed;
+	right: 0.2rem;
+	bottom: 1.3rem;
+	z-index: 9999;
+}
+.topbox img {
+	width: 0.8rem;
+	height: 0.8rem;
+	z-index: 9999
+}
+/*---warp1---*/
+.wrap1 {
+	width: 6.4rem;
+	background: #bd1d0a;
+	padding: 0.1rem 0rem 0.15rem 0rem;
+}
+.wrap1 .diva {
+	width: 6.4rem;
+	height: 0.7rem;
+	position: relative;
+}
+.wrap1 .diva .sdiva {
+	width: 1rem;
+	height: 0.7rem;
+	overflow: hidden;
+	float: left;
+	position: absolute;
+	z-index: 9999;
+	left: 0.2rem;
+}
+.wrap1 .diva .sdiva span {
+	float: left;
+	color: #FFF;
+	line-height: 0.7rem;
+	font-size: 0.24rem;
+}
+.wrap1 .diva .sdiva em {
+	float: left;
+	padding: 0.26rem 0rem 0rem 0.1rem;
+}
+.wrap1 .diva .sdiva em img {
+	float: left;
+	width: 0.26rem;
+	height: 0.14rem;
+}
+.wrap1 .diva .sdivb {
+	width: 4.4rem;
+	height: 0.7rem;
+	overflow: hidden;
+	color: #FFF;
+	display: block;
+	float: left;
+	line-height: 0.7rem;
+	font-size: 0.34rem;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: absolute;
+	left: 1rem;
+}
+.wrap1 .diva .sdivc {
+	width: 2rem;
+	height: 0.34rem;
+	overflow: hidden;
+	float: left;
+	position: absolute;
+	z-index: 9999;
+	left: 0.2rem;
+	margin-top: 0.14rem;
+}
+.wrap1 .diva .sdivc img {
+	float: left;
+	width: 0.4rem;
+	height: 0.34rem;
+}
+/*---导航----*/
+.selCity {
+	width: 6.2rem;
+	height: 0.7rem;
+	float: left;
+	position: absolute;
+	left: 0;
+	z-index: 999;
+}
+.selBox {
+	float: left;
+}
+.selTxt {
+	float: left;
+}
+.selTxt img {
+	width: 0.4rem;
+	height: 0.34rem;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	padding-top: 0.15rem;
+}
+.optionbox {
+	position: absolute;
+	top: 0.7rem;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	width: 6.4rem;
+	background: #fff;
+	border-bottom: #f2f2f2 solid 0.01rem;
+}
+.optionbox ul {
+	float: left;
+	overflow: hidden;
+	width: 6.4rem;
+	text-align: center;
+	padding: 0.3rem 0rem;
+}
+.optionbox ul li {
+	width: 2.1rem;
+	float: left;
+	margin: 0.2rem 0rem;
+}
+.optionbox ul li span {
+	width: 2.1rem;
+	font-size: 0.22rem;
+	text-align: center;
+	float: left;
+}
+.optionbox ul li img {
+	width: 1rem;
+	height: 1rem;
+	float: left;
+	margin-bottom: 0.1rem;
+	display: inline-block;
+	margin-left: 0.55rem;
+}
+.wrap1 .divb {
+	width: 6rem;
+height:.8rem;
+border-radius:.1rem;
+	background: #FFF;
+	margin: 0rem 0.2rem;
+}
+.wrap1 .divb dt {
+	width: 5rem;
+	height: 0.8rem;
+}
+.wrap1 .divb dt .divc_wbk {
+height:.8rem;
+	border: 0;
+	background: 0 0;
+font-size:.28rem;
+line-height:.8rem;
+	color: #555;
+}
+.wrap1 .divb .btna {
+width:.8rem;
+height:.8rem;
+	border: none;
+	background: url(../img/img3.png) center no-repeat;
+background-size:.32rem;
+}
+/*---warp1---*/
+
+
+
+/*首页区域*/
+.regist_quyu {
+	width: 5rem;
+	height: 5rem;
+	float: left;
+	display: inline;
+	overflow-y: scroll;
+}
+.regist_quyu li {
+	width: 5rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	text-align: center;
+	font-size: 0.3rem;
+	border-bottom: #eee solid 0.01rem;
+}
+.regist_quyu li a {
+	width: 5rem;
+	display: block;
+}
+.regist_quyu li.regist_quyu_on a {
+	color: #bd1d0a;
+	font-weight: bold;
+}
+/*首页区域*/
+
+
+ 
+
+
+
+/*焦点图*/
+#banner {
+	position: relative;
+	overflow: hidden;
+	width: 6.4rem;
+	height: 3rem;
+}
+#banner .swiper-slide {
+	position: relative;
+	text-align: center;
+}
+#banner img {
+	width: 6.4rem;
+	height: 3rem;
+	overflow: hidden;
+}
+.pagination {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+	width: 6.4rem;
+	height: 0.54rem;
+	text-align: center;
+	overflow: hidden;
+}
+.swiper-pagination-bullet {
+	display: inline-block;
+	margin: 0rem 0.05rem;
+	width: 0.12rem;
+	height: 0.12rem;
+	border-radius: 50%;
+	border: #FFF solid 0.01rem;
+	cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+	background: #FFF;
+}
+/*wrap2*/
+.wrap2 {
+	width: 6.4rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	padding: 0.3rem 0rem 0rem 0rem;
+	margin-bottom: 0.2rem;
+}
+.wrap2 ul {
+	width: 6.5rem;
+	overflow: hidden;
+	float: left;
+	text-align: center;
+}
+.wrap2 ul li {
+	width: 1.6rem;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 0.3rem;
+}
+.wrap2 ul li span {
+	width: 1.6rem;
+	font-size: 0.22rem;
+	text-align: center;
+	float: left;
+}
+.wrap2 ul li img {
+	width: 1rem;
+	height: 1rem;
+	float: left;
+	margin-bottom: 0.1rem;
+	display: inline-block;
+	margin-left: 0.3rem;
+}
+.wrap2 .diva {
+	width: 6rem;
+	overflow: hidden;
+	border-top: #e7e7e7 solid 0.01rem;
+	padding: 0.3rem 0rem;
+	float: left;
+	margin-left: 0.2rem;
+}
+.wrap2 .diva .sdiva {
+	width: 1rem;
+	height: 0.8rem;
+	overflow: hidden;
+	float: left;
+	border-right: #e0e0e0 solid 0.01rem;
+}
+.wrap2 .diva .sdiva img {
+	width: 0.8rem;
+	height: 0.8rem;
+	overflow: hidden;
+	float: left;
+}
+.m_wnews {
+	width: 4.7rem;
+	height: 0.8rem;
+	position: relative;
+	zoom: 1;
+	float: left;
+	line-height: 0.4rem;
+	overflow: hidden;
+	margin-left: 0.2rem;
+	line-height: 0.4rem;
+}
+.m_wnews dd {
+	width: 4.7rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+}
+/*wrap2*/
+
+ 
+
+
+
+
+/*表单*/
+.regist_form {
+	width: 5rem;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 0.3rem;
+}
+.regist_form li {
+	width: 5rem;
+	float: left;
+	overflow: hidden;
+}
+.regist_form li span {
+	width: 1rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.22rem;
+	text-align: right;
+	padding-right: 0.1rem;
+	line-height: 0.6rem;
+}
+.regist_form li em {
+	float: left;
+	overflow: hidden;
+}
+.input_text_x {
+	width: 4.56rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	overflow: hidden;
+	float: left;
+	border: 0.01rem solid #e7e7e7;
+	border-radius: 0.1rem;
+	font-size: 0.24rem;
+	color: #444;
+	padding: 0rem 0.2rem;
+	margin: 0rem 0rem 0.1rem 0rem;
+}
+.btn_x {
+	width: 5rem;
+	height: 0.8rem;
+	float: left;
+	text-align: center;
+	line-height: 0.8rem;
+	overflow: hidden;
+	background: #05b564;
+	border-radius: 0.1rem;
+	border: none;
+	color: #fff;
+	font-size: 0.3rem;
+	cursor: pointer;
+}
+.closea {
+	width: 0.3rem;
+	height: 0.3rem;
+	float: left;
+	position: absolute;
+	top: 0.46rem;
+	right: 0.3rem;
+	cursor: pointer;
+}
+.closea img {
+	width: 0.3rem;
+	height: 0.3rem;
+	cursor: pointer;
+	float: left;
+}
+/*表单*/
+
+
+
+
+
+
+
+
+
+
+/*wrap3*/
+.wrap3 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+	padding: 0rem 0.2rem;
+}
+.wrap3 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap3 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap3 .diva dd {
+	width: 1rem;
+	float: right;
+	overflow: hidden;
+	padding-top: 0.25rem;
+}
+.wrap3 .diva dd a {
+	width: 1rem;
+	display: block;
+	overflow: hidden;
+}
+.wrap3 .diva dd img {
+	width: 0.14rem;
+	height: 0.25rem;
+	float: right;
+	overflow: hidden;
+}
+.wrap3 .divb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap3 .divb ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap3 .divb ul li {
+	width: 2.9rem;
+	float: left;
+	overflow: hidden;
+	margin-right: 0.2rem;
+}
+.wrap3 .divb .sdiva {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.wrap3 .divb .sdiva dt {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap3 .divb .sdiva dt img {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap3 .divb .sdiva h2 {
+	width: 2.9rem;
+	height: 0.6rem;
+	background: #000;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	FILTER: alpha(opacity=60);
+	opacity: 0.6;
+}
+.wrap3 .divb .sdiva dd {
+	width: 2.4rem;
+	height: 0.6rem;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	color: #FFF;
+	line-height: 0.6rem;
+	padding: 0rem 0.2rem;
+	font-size: 0.22rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap3 .divb .sdivb {
+	width: 2.9rem;
+	height: 0.9rem;
+	float: left;
+	overflow: hidden;
+	padding-top: 0.2rem;
+}
+.wrap3 .divb .sdivb dt {
+	width: 2.9rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.26rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap3 .divb .sdivb dt font {
+	color: #444;
+}
+.wrap3 .divb .sdivb dd {
+	width: 2.9rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.24rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #ff611a;
+}
+.wrap3 .divc {
+	width: 6rem;
+	height: 1rem;
+	float: left;
+	overflow: hidden;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.3rem;
+}
+/*wrap3*/
+
+
+ 
+ 
+
+
+
+/*wrap4*/
+.wrap4 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+	padding: 0rem 0.2rem;
+}
+.wrap4 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap4 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap4 .diva dd {
+	width: 1rem;
+	float: right;
+	overflow: hidden;
+	padding-top: 0.25rem;
+}
+.wrap4 .diva dd a {
+	width: 1rem;
+	display: block;
+	overflow: hidden;
+}
+.wrap4 .diva dd img {
+	width: 0.14rem;
+	height: 0.25rem;
+	float: right;
+	overflow: hidden;
+}
+.wrap4 .divb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap4 .divb ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	margin-top: 0.3rem;
+}
+.wrap4 .divb ul li {
+	width: 2.9rem;
+	float: left;
+	overflow: hidden;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.wrap4 .divb ul li dt {
+	width: 2.9rem;
+	height: 2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap4 .divb ul li dt img {
+	width: 2.9rem;
+	height: 2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap4 .divb ul li dd {
+	width: 2.5rem;
+	float: left;
+	overflow: hidden;
+	background: #f8f8f8;
+	padding: 0.1rem 0.2rem;
+}
+.wrap4 .divb ul li dd h2 {
+	width: 2.5rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.24rem;
+	margin-bottom: 0.1rem
+}
+.wrap4 .divb ul li dd h3 {
+	width: 2.5rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap4 .divb ul li dd h3 b {
+	float: left;
+	overflow: hidden;
+	font-size: 0.22rem;
+	color: #F00;
+}
+.wrap4 .divb ul li dd h3 span {
+	float: right;
+	text-align: right;
+	overflow: hidden;
+	font-size: 0.22rem;
+	color: #F00;
+}
+.wrap4 .divc {
+	width: 6rem;
+	height: 1rem;
+	float: left;
+	overflow: hidden;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.3rem;
+	border-top: #ebebeb solid 0.01rem;
+}
+.wrap4 .divd {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap4 .divd ul {
+	width: 6.2rem;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 0.3rem;
+}
+.wrap4 .divd ul li {
+	width: 6rem;
+	height: 0.7rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: #ededed dashed 0.01rem;
+	line-height: 0.7rem;
+}
+.wrap4 .divd ul li h2 {
+	width: 4rem;
+	height: 0.7rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.22rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap4 .divd ul li h3 {
+	width: 2rem;
+	height: 0.7rem;
+	float: left;
+	text-align: right;
+	overflow: hidden;
+	font-size: 0.22rem;
+	color: #777;
+}
+/*wrap4*/
+
+
+
+
+
+
+/*wrap5*/
+.wrap5 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+	padding: 0rem 0.2rem;
+}
+.wrap5 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap5 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap5 .diva dd {
+	width: 1rem;
+	float: right;
+	overflow: hidden;
+	padding-top: 0.25rem;
+}
+.wrap5 .diva dd a {
+	width: 1rem;
+	display: block;
+	overflow: hidden;
+}
+.wrap5 .diva dd img {
+	width: 0.14rem;
+	height: 0.25rem;
+	float: right;
+	overflow: hidden;
+}
+.wrap5 .divb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap5 .divb .sdiva {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: #ebebeb solid 0.01rem;
+	padding: 0.3rem 0rem;
+}
+.wrap5 .divb .sdiva dt {
+	width: 2rem;
+	height: 1.5rem;
+	float: left;
+	overflow: hidden;
+	margin-right: 0.2rem;
+}
+.wrap5 .divb .sdiva dt img {
+	width: 2rem;
+	height: 1.5rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap5 .divb .sdiva dd {
+	width: 3.79rem;
+	height: 1.5rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap5 .divb .sdiva dd h2 {
+	width: 3.79rem;
+	height: 0.5rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.28rem;
+	line-height: 0.4rem;
+	color: #333;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap5 .divb .sdiva dd h3 {
+	width: 3.79rem;
+	height: 0.6rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.24rem;
+	line-height: 0.3rem;
+	color: #777;
+	margin-bottom: 0.1rem;
+}
+.wrap5 .divb .sdiva dd h4 {
+	width: 3.79rem;
+	height: 0.3rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.24rem;
+	line-height: 0.3rem;
+	color: #777;
+}
+.wrap5 .divc {
+	width: 6rem;
+	height: 1rem;
+	float: left;
+	overflow: hidden;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.3rem;
+}
+/*wrap5*/
+
+
+ 
+
+
+
+/*wrap6*/
+.wrap6 {
+	width: 6rem;
+	background: #222222;
+	overflow: hidden;
+	padding: 0.34rem 0.2rem;
+	color: #FFF;
+	text-align: center;
+	font-size: 0.22rem;
+	line-height: 0.4rem;
+	margin-bottom: 1rem;
+}
+/*wrap6*/
+
+
+
+ 
+
+
+
+
+
+/*---快捷搜索---*/
+.demo {
+	width: 6.4rem;
+	background: #FFF;
+	float: left;
+	margin-bottom: 0.2rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+}
+.select {
+	position: relative;
+	float: right;
+	width: 1.58rem;
+	z-index: 1;
+	border-right: #e0e0e0 solid 0.01rem;
+}
+.select dt {
+	width: 1.58rem;
+	height: 0.8rem;
+	display: inline-block;
+	line-height: 0.8rem;
+	cursor: pointer;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	z-index: 99;
+	font-size: 0.28rem;
+	text-align: center;
+	color: #333;
+}
+.select dt:hover, .select dt.cur {
+	color: #bd1d0a;
+}
+.select dd {
+	position: absolute;
+	left: 0;
+	top: 0.8rem;
+	width: 1.56rem;
+	background: #fff;
+	display: none;
+	border-left: 0.01rem solid #e0e0e0;
+	border-right: 0.01rem solid #e0e0e0;
+	border-bottom: 0.01rem solid #e0e0e0;
+	display: none;
+}
+.select dd ul {
+	width: 1.56rem;
+	overflow: auto;
+	max-height: 3rem;
+	text-align: center;
+}
+.select dd ul li a {
+	width: 1.56rem;
+	display: block;
+	padding: 0.14rem 0rem;
+	font-size: 0.24rem;
+	color: #555;
+}
+.select dd ul li a:hover {
+	width: 1.56rem;
+	background: #bd1d0a;
+	display: block;
+	color: #FFF;
+	color: #fff;
+	font-size: 0.24rem;
+}
+/*---快捷搜索---*/
+
+
+
+ 
+
+
+
+
+
+
+/*---翻页---*/
+.digg {
+	clear: both;
+	padding: 0.2rem 0rem 1.4rem 0rem;
+	text-align: center;
+	font-size: 0.22rem;
+}
+.digg .current {
+	padding: 0.08rem 0.2rem;
+	background: #555656;
+	color: #FFF;
+	border: #555656 solid 0.01rem;
+}
+.digg a {
+	padding: 0.08rem 0.2rem;
+	border: #d5d5d5 solid 0.01rem;
+	background: #fff;
+	color: #555;
+}
+.digg a:hover {
+	background: #555656;
+	color: #FFF;
+	border: #555656 solid 0.01rem;
+}
+/*---翻页---*/
+
+
+
+/*---翻页---*/
+.digg2 {
+	clear: both;
+	padding: 0.2rem 0rem 0.4rem 0rem;
+	text-align: center;
+	font-size: 0.22rem;
+}
+.digg2 .current {
+	padding: 0.08rem 0.2rem;
+	background: #555656;
+	color: #FFF;
+	border: #555656 solid 0.01rem;
+}
+.digg2 a {
+	padding: 0.08rem 0.2rem;
+	border: #d5d5d5 solid 0.01rem;
+	background: #fff;
+	color: #555;
+}
+.digg2 a:hover {
+	background: #555656;
+	color: #FFF;
+	border: #555656 solid 0.01rem;
+}
+/*---翻页---*/
+
+
+
+
+/*---楼盘详细切换图---*/
+#banner2 {
+	position: relative;
+	overflow: hidden;
+	width: 6.4rem;
+	height: 4rem;
+}
+#banner2 .swiper-slide {
+	position: relative;
+	text-align: center;
+}
+#banner2 img {
+	width: 6.4rem;
+	height: 4rem;
+	overflow: hidden;
+}
+/*---楼盘详细切换图---*/
+
+
+
+
+
+
+/*wrap7*/
+.wrap7 {
+	width: 6rem;
+	background: #FFF;
+	overflow: hidden;
+	padding: 0rem 0.2rem;
+	margin-bottom: 0.2rem;
+	border-top: #e0e0e0 solid 0.01rem;
+}
+.wrap7 .diva {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: #e2e2e2 solid 0.01rem;
+	line-height: 0.4rem;
+	font-size: 0.26rem;
+	padding: 0.2rem 0rem;
+}
+.wrap7 .diva span {
+	font-size: 0.38rem;
+	color: #e60012;
+	font-weight: bold;
+}
+.wrap7 .diva b {
+	font-size: 0.24rem;
+	color: #fff;
+	background: #e60012;
+	text-align: center;
+	border-radius: 0.04rem;
+	padding: 0.06rem 0.14rem;
+	margin-left: 0.3rem;
+}
+/*wrap7*/
+
+
+
+
+/*wrap8*/
+.wrap8 {
+	width: 6rem;
+	background: #FFF;
+	overflow: hidden;
+	padding: 0.3rem 0.2rem;
+	margin-bottom: 0.2rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+}
+.wrap8 span {
+	font-size: 0.24rem;
+	color: #e60012;
+	text-align: center;
+	border: #e60012 solid 0.01rem;
+	padding: 0.06rem 0.14rem;
+	float: left;
+	margin-right: 0.2rem;
+}
+/*wrap8*/
+
+
+
+
+
+
+/*wrap9*/
+.wrap9 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+	padding: 0rem 0.2rem;
+}
+.wrap9 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap9 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap9 .diva dd {
+	width: 1rem;
+	float: right;
+	overflow: hidden;
+	padding-top: 0.25rem;
+}
+.wrap9 .diva dd a {
+	width: 1rem;
+	display: block;
+	overflow: hidden;
+}
+.wrap9 .diva dd img {
+	width: 0.14rem;
+	height: 0.25rem;
+	float: right;
+	overflow: hidden;
+}
+/*wrap9*/
+
+
+ 
+
+
+
+/*户型相册放大*/
+#Gallery {
+	float: left;
+	overflow: hidden;
+}
+#Gallery ul {
+	width: 6.3rem;
+	height: 5.4rem;
+	float: left;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+div.gallery-row:after {
+	display: block;
+}
+div.gallery-item {
+	float: left;
+	width: 2.9rem;
+	height: 2.7rem;
+	background: #fff;
+	overflow: hidden;
+	display: block;
+	margin-right: 0.2rem;
+}
+div.gallery-item a {
+	display: block;
+}
+div.gallery-item img {
+	display: block;
+	width: 2.9rem;
+	height: 2rem;
+}
+.photo-title {
+	width: 2.9rem;
+	font-size: 0.24rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	padding: 0.2rem 0rem;
+}
+#GalleryA {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+#GalleryA ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+/*户型相册放大*/
+
+
+
+
+
+
+
+
+/*wrap10*/
+.wrap10 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 1.2rem;
+	padding: 0rem 0.2rem;
+}
+.wrap10 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap10 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap10 .divb {
+	width: 6rem;
+	overflow: hidden;
+}
+.wrap10 .divb ul {
+	float: left;
+	width: 6rem;
+}
+.wrap10 .divb ul li {
+	float: left;
+	width: 6rem;
+	border-bottom: 0.01rem solid #e0e0e0;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+	font-size: 0.26rem;
+}
+.wrap10 .divb ul li h2 {
+	width: 1.3rem;
+	float: left;
+	color: #666;
+	overflow: hidden;
+}
+.wrap10 .divb ul li span {
+	width: 4.68rem;
+	float: left;
+	overflow: hidden;
+	color: #222;
+}
+.wrap10 .divc {
+	width: 6rem;
+	padding: 0.2rem 0rem;
+	overflow: hidden;
+}
+/*wrap10*/
+
+
+
+
+
+
+
+
+/*------楼盘详情页尾部固定------*/
+#wrap11 {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	overflow: hidden;
+	width: 100%;
+}
+.wrap11 {
+	width: 6.4rem;
+	height: 1rem;
+	overflow: hidden;
+	background-color: #515151;
+}
+.wrap11 .diva {
+	width: 2.8rem;
+	float: left;
+	padding: 0.2rem 0rem 0rem 0.2rem;
+	color: #FFF;
+}
+.wrap11 .divb {
+	width: 3.4rem;
+	height: 1rem;
+	float: left;
+	background: #363636;
+}
+.wrap11 .divb dd {
+	width: 1.66rem;
+	height: 1rem;
+	float: left;
+	border-left: 0.01rem solid #515151;
+	color: #fff;
+	text-align: center;
+	font-size: 0.24rem;
+}
+.wrap11 .divb dd a {
+	width: 1.66rem;
+	height: 1rem;
+	color: #fff;
+	display: block;
+}
+.wrap11 .divb dd img {
+	width: 0.32rem;
+	height: 0.32rem;
+	color: #fff;
+	display: block;
+	margin: 0.17rem 0rem 0.05rem 0.67rem;
+}
+/*------楼盘详情页尾部固定------*/
+
+
+
+
+
+
+
+
+/*-------地图--------*/
+.ditu {
+	width: 6.4rem;
+	overflow: hidden;
+	background: #FFF;
+}
+.info-box {
+	-webkit-box-sizing: border-box;
+	width: 6.4rem;
+	box-shadow: 0 0 8px #ccc;
+	-webkit-background-size: 1px 105px;
+	padding-bottom: 0.5rem;
+}
+.info-box h3.info-title {
+	overflow: hidden;
+	color: #333;
+	padding: 0.2rem 0.2rem 0rem 0.2rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 0.34rem;
+}
+.info-box p.info-content {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+	white-space: nowrap;
+	font-size: 0.28rem;
+}
+.info-box .info-btn {
+	width: 6rem;
+	height: 1rem;
+	border: 0.01rem solid #c1c1c1;
+	border-radius: 0.1rem;
+	margin-left: 0.2rem;
+	background: #FFF;
+}
+.info-box .info-btn a {
+	width: 3.5rem;
+	height: 1rem;
+	line-height: 1rem;
+	background: url(../img/ico21.png) no-repeat center;
+	text-align: center;
+	display: block;
+	padding-left: 1.5rem;
+	font-size: 0.28rem;
+}
+/*-------地图--------*/
+
+
+
+
+
+
+
+/*-------户型内页--------*/
+.wrap13 {
+	width: 6.4rem;
+	overflow: hidden;
+	background: #fff;
+	float: left;
+}
+.wrap13 span {
+	width: 1.28rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	line-height: 0.76rem;
+	font-size: 0.24rem;
+}
+.wrap13 span a {
+	display: block;
+}
+.wrap13 span a:hover {
+	display: block;
+	border-bottom: 0.06rem #bd1d0a solid;
+}
+.wrap13 .active a {
+	border-bottom: 0.06rem #bd1d0a solid;
+	color: #bd1d0a;
+}
+/*-------户型内页--------*/
+
+
+
+
+
+/*wrap12*/
+.wrap12 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	border-bottom: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	margin-bottom: 1.2rem;
+	padding: 0rem 0.2rem;
+}
+/*--wrap14--*/
+.wrap14 {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap14 ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	margin-left: 0.2rem;
+}
+.wrap14 ul li {
+	width: 2.9rem;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+	display: block;
+}
+.wrap14 .diva {
+	width: 2.9rem;
+	height: 2rem;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.wrap14 .diva img {
+	width: 2.9rem;
+	height: 2rem;
+	float: left;
+	overflow: hidden;
+	transition: all 0.8s;
+}
+.wrap14 .diva img:hover {
+	transform: scale(1.1);
+}
+.mask {
+	FILTER: alpha(opacity=70);
+	opacity: 0.7;
+	width: 2.9rem;
+	height: 0.7rem;
+	background-color: #000000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+}
+.comt {
+	width: 2.7rem;
+	height: 0.7rem;
+	position: absolute;
+	left: 0rem;
+	bottom: 0rem;
+	line-height: 0.7rem;
+	padding: 0rem 0.1rem;
+}
+.comt span {
+	width: 1.5rem;
+	height: 0.7rem;
+	float: left;
+	font-size: 0.22rem;
+	color: #FFF;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.comt h2 {
+	width: 1.2rem;
+	height: 0.7rem;
+	float: left;
+	font-size: 0.20rem;
+	text-align: right;
+	color: #FFF;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.wrap14 .divb {
+	width: 2.9rem;
+	height: auto;
+	float: left;
+	overflow: hidden;
+	background: #fff;
+}
+.wrap14 .divb .sdiva {
+	width: 2.7rem;
+	height: 0.6rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: #edeeed solid 0.01rem;
+	line-height: 0.6rem;
+	padding: 0rem 0.1rem;
+}
+.wrap14 .divb .sdiva dt {
+	width: 1.2rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.2rem;
+	color: #666;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.wrap14 .divb .sdiva dd {
+	width: 1.5rem;
+	float: left;
+	overflow: hidden;
+	text-align: right;
+	font-size: 0.2rem;
+	color: #666;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.wrap14 .divb .sdiva dd b {
+	font-size: 0.22rem;
+	color: #f25824;
+	font-weight: bold;
+}
+.wrap14 .divb .sdivb {
+	width: 2.7rem;
+	height: 0.6rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.6rem;
+	font-size: 0.22rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #666;
+	padding: 0rem 0.1rem;
+}
+/*--wrap14--*/
+ 
+
+
+
+ 
+
+
+
+ 
+/*--wrap15--*/
+.wrap15 {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap15 ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	margin-left: 0.2rem;
+}
+.wrap15 ul li {
+	width: 2.9rem;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-right: 0.2rem;
+	display: block;
+}
+.wrap15 ul li dt {
+	width: 2.9rem;
+	height: 2rem;
+	overflow: hidden;
+	float: left;
+}
+.wrap15 ul li dt img {
+	width: 2.9rem;
+	height: 2rem;
+	overflow: hidden;
+	float: left;
+}
+.wrap15 ul li dd {
+	width: 2.9rem;
+	height: 0.8rem;
+	overflow: hidden;
+	float: left;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.24rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*--wrap15--*/
+
+ 
+
+
+/*--视频--*/
+.wrap16 {
+	width: 6rem;
+	float: left;
+	padding: 0rem 0.2rem;
+	background: #FFF;
+	margin-bottom: 0.2rem;
+	border-bottom: #e1e1e1 solid 0.01rem;
+}
+.wrap16 .diva {
+	width: 6rem;
+	float: left;
+	border-bottom: #e1e1e1 solid 0.01rem;
+	padding: 0.3rem 0rem;
+}
+.wrap16 .diva dt {
+	width: 6rem;
+	font-size: 0.28rem;
+	padding-bottom: 0.2rem;
+	line-height: 0.4rem;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+}
+.wrap16 .diva dd {
+	width: 6rem;
+	font-size: 0.22rem;
+	text-align: center;
+	float: left;
+}
+.wrap16 .diva dd span {
+	padding: 0rem 0.1rem;
+	color: #888;
+}
+.wrap16 .divb {
+	width: 6rem;
+	overflow: hidden;
+	float: left;
+	padding: 0.3rem 0rem;
+}
+.wrap16 .divb img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+*width:100%;
+	height: auto !important;
+}
+.wrap16 .divc {
+	width: 6rem;
+	height: auto;
+	float: left;
+	margin-bottom: 0.4rem;
+	border-top: #e1e1e1 solid 0.01rem;
+	padding-top: 0.3rem;
+}
+.wrap16 .divc li {
+	width: 6rem;
+	height: 0.5rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.5rem;
+	font-size: 0.22rem;
+}
+.wrap16 .divc li a {
+	width: 6rem;
+	height: 0.5rem;
+	float: left;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*--视频--*/
+
+
+ 
+
+
+
+/*-------------问答-------------*/
+.wrap17 {
+	width: 6rem;
+	overflow: hidden;
+	margin-left: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.wrap17 dl {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	border-bottom: 0.01rem solid #ddd;
+	padding: 0.3rem 0rem;
+	line-height: 0.4rem;
+}
+.wrap17 dl a {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	display: block;
+}
+.wrap17 dl dt {
+	width: 6rem;
+	height: 0.4rem;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+}
+.wrap17 dl dt h2 {
+	width: 0.5rem;
+	height: 0.4rem;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	font-size: 0.2rem;
+	line-height: 0.4rem;
+	color: #FFF;
+	background: #ee9696;
+	margin-right: 0.1rem;
+}
+.wrap17 dl dt span {
+	width: 3rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.24rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap17 dl dt b {
+	width: 2rem;
+	float: right;
+	overflow: hidden;
+	font-size: 0.22rem;
+	text-align: right;
+	color: #888;
+	font-weight: normal;
+}
+.wrap17 dl dd {
+	width: 6rem;
+	height: 0.4rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap17 dl dd h2 {
+	width: 0.5rem;
+	height: 0.4rem;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #FFF;
+	background: #9ed094;
+	margin-right: 0.1rem;
+}
+.wrap17 dl dd span {
+	width: 3rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.24rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wrap17 dl dd b {
+	width: 2rem;
+	float: right;
+	overflow: hidden;
+	font-size: 0.22rem;
+	text-align: right;
+	color: #888;
+	font-weight: normal;
+}
+/*-------------问答-------------*/
+
+
+
+
+
+
+
+/*-------房产资讯--------*/
+.wrap18 {
+	width: 6.4rem;
+	overflow: hidden;
+	background: #fff;
+	float: left;
+}
+.wrap18 span {
+	width: 2.1rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	line-height: 0.76rem;
+	font-size: 0.24rem;
+}
+.wrap18 span a {
+	display: block;
+}
+.wrap18 span a:hover {
+	display: block;
+	border-bottom: 0.04rem #bd1d0a solid;
+}
+.wrap18 .active a {
+	border-bottom: 0.04rem #bd1d0a solid;
+	color: #bd1d0a;
+}
+/*-------房产资讯--------*/
+
+
+
+
+
+
+
+
+/*----团购列表---*/
+.wrap19 {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap19 .diva {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem;
+	background: #FFF;
+	margin-bottom: 0.2rem;
+}
+.wrap19 .diva a {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	display: block;
+}
+.wrap19 .diva .sdiva {
+	width: 6rem;
+	height: 4rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap19 .diva .sdiva img {
+	width: 6rem;
+	height: 4rem;
+	float: left;
+	overflow: hidden;
+	transition: all 0.8s;
+}
+.wrap19 .diva .sdiva img:hover {
+	transform: scale(1.1);
+}
+.wrap19 .diva .sdivb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap19 .diva .sdivb h2 {
+	width: 6rem;
+	float: left;
+	font-size: 0.32rem;
+	margin-bottom: 0.2rem;
+	color: #444;
+}
+.wrap19 .diva .sdivb h2 font {
+	color: #444;
+}
+.wrap19 .diva .sdivb h3 {
+	width: 6rem;
+	float: left;
+	font-size: 0.22rem;
+	margin-bottom: 0.2rem;
+	color: #666;
+	border-bottom: 0.01rem dashed #DDD;
+	padding-bottom: 0.2rem;
+}
+.wrap19 .diva .sdivb h4 {
+	width: 6rem;
+	float: left;
+	color: #bd1d0a;
+	font-size: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.wrap19 .diva .sdivb h4 b {
+	margin: 0rem 0.1rem;
+	font-size: 0.3rem;
+}
+.wrap19 .diva .sdivb h5 {
+	width: 6rem;
+	float: left;
+	color: #666;
+	font-size: 0.24rem;
+	margin-bottom: 0.2rem;
+}
+.wrap19 .diva .sdivb h5 b {
+	margin: 0rem 0.1rem;
+	color: #bd1d0a;
+	font-size: 0.24rem;
+	font-weight: bold;
+}
+.wrap19 .diva .sdivb h5 img {
+	width: 0.16rem;
+	height: 0.16rem;
+	overflow: hidden;
+}
+.wrap19 .diva .sdivb h6 {
+	width: 6rem;
+	float: left;
+	font-size: 0.3rem;
+	color: #bd1d0a;
+	font-weight: bold;
+	margin-bottom: 0.2rem;
+}
+.wrap19 .diva .sdivb span {
+	width: 6rem;
+	height: 0.7rem;
+	float: left;
+	background: #bd1d0a;
+	border-radius: 0.1rem;
+	text-align: center;
+	line-height: 0.7rem;
+	color: #FFF;
+	font-size: 0.26rem;
+}
+.wrap20 {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem;
+	background: #FFF;
+	margin-bottom: 0.2rem;
+}
+#banner3 {
+	position: relative;
+	overflow: hidden;
+	width: 6rem;
+	height: 4rem;
+}
+#banner3 .swiper-slide {
+	position: relative;
+	text-align: center;
+}
+#banner3 img {
+	width: 6rem;
+	height: 4rem;
+	overflow: hidden;
+}
+.wrap20 .diva {
+	width: 6rem;
+	float: left;
+	font-size: 0.32rem;
+	margin-bottom: 0.2rem;
+	color: #444;
+}
+.wrap20 .divb {
+	width: 6rem;
+	float: left;
+	font-size: 0.22rem;
+	margin-bottom: 0.2rem;
+	color: #666;
+}
+.wrap20 .divc {
+	width: 6rem;
+	float: left;
+	margin-bottom: 0.2rem;
+}
+.wrap20 .divd {
+	width: 6rem;
+	float: left;
+	margin-bottom: 0.2rem;
+}
+.wrap20 .divd h2 {
+	width: 6rem;
+	float: left;
+	font-size: 0.22rem;
+	margin-bottom: 0.1rem;
+}
+.wrap20 .dive {
+	width: 6rem;
+	float: left;
+}
+.wrap20 .dive h2 {
+	width: 6rem;
+	float: left;
+	font-size: 0.34rem;
+	color: #bd1d0a;
+	margin-bottom: 0.1rem;
+}
+.wrap20 .dive h3 {
+	width: 6rem;
+	float: left;
+	font-size: 0.22rem;
+	line-height: 0.4rem;
+	margin-bottom: 0.2rem;
+	padding-bottom: 0.2rem;
+	border-bottom: 0.01rem dashed #DDD;
+}
+.wrap20 .dive h4 {
+	width: 6rem;
+	float: left;
+	color: #bd1d0a;
+	font-size: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.wrap20 .dive h4 b {
+	margin: 0rem 0.1rem;
+	font-size: 0.3rem;
+}
+.wrap20 .dive h5 {
+	width: 6rem;
+	float: left;
+	color: #666;
+	font-size: 0.24rem;
+	margin-bottom: 0.2rem;
+}
+.wrap20 .dive h5 b {
+	margin: 0rem 0.1rem;
+	color: #bd1d0a;
+	font-size: 0.24rem;
+	font-weight: bold;
+}
+.wrap20 .dive h5 img {
+	width: 0.16rem;
+	height: 0.16rem;
+	overflow: hidden;
+}
+.wrap20 .dive h6 {
+	width: 6rem;
+	float: left;
+	font-size: 0.3rem;
+	color: #bd1d0a;
+	font-weight: bold;
+	margin-bottom: 0.2rem;
+}
+.wrap20 .dive span {
+	width: 6rem;
+	height: 0.7rem;
+	float: left;
+	text-align: center;
+	line-height: 0.7rem;
+	color: #FFF;
+	font-size: 0.26rem;
+}
+.wrap20 .dive span a {
+	width: 6rem;
+	height: 0.7rem;
+	display: block;
+	color: #FFF;
+	background: #bd1d0a;
+	border-radius: 0.1rem;
+}
+.wrap20 .dive span a:hover {
+	width: 6rem;
+	height: 0.7rem;
+	display: block;
+	color: #FFF;
+	background: #05b564;
+}
+.wrap21 {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem;
+	background: #FFF;
+	margin-bottom: 0.2rem;
+}
+.wrap21 .diva {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	margin-bottom: 0.2rem;
+}
+.wrap21 .divb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+/*----团购列表---*/
+
+
+
+
+
+
+
+
+
+/*--wrap22--*/
+.wrap22 {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap22 ul {
+	width: 6.3rem;
+	float: left;
+	overflow: hidden;
+	margin-left: 0.2rem;
+}
+.wrap22 ul li {
+	width: 2.9rem;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+	display: block;
+}
+.wrap22 .diva {
+	width: 2.9rem;
+	height: 3rem;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.wrap22 .diva img {
+	width: 2.9rem;
+	height: 3rem;
+	float: left;
+	overflow: hidden;
+	transition: all 0.8s;
+}
+.wrap22 .diva img:hover {
+	transform: scale(1.1);
+}
+.wrap22 .diva dt {
+	FILTER: alpha(opacity=70);
+	opacity: 0.7;
+	width: 2.9rem;
+	height: 0.7rem;
+	background-color: #000000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+}
+.wrap22 .diva dd {
+	width: 2.7rem;
+	height: 0.7rem;
+	position: absolute;
+	left: 0rem;
+	bottom: 0rem;
+	line-height: 0.7rem;
+	padding: 0rem 0.1rem;
+	font-size: 0.22rem;
+	color: #FFF;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
+}
+/*--wrap22--*/
+
+
+
+
+
+
+/*--wrap23--*/
+.wrap23 {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.3rem 0.2rem;
+	background: #FFF;
+}
+/*--wrap23--*/
+
+
+
+
+
+
+/*wrap25*/
+.wrap25 {
+	width: 6rem;
+	background: #FFF;
+	border-top: #e0e0e0 solid 0.01rem;
+	overflow: hidden;
+	padding: 0rem 0.2rem;
+}
+.wrap25 .diva {
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap25 .diva dt {
+	float: left;
+	overflow: hidden;
+	font-size: 0.34rem;
+	color: #333;
+	font-weight: bold;
+}
+.wrap25 .diva dd {
+	width: 1rem;
+	float: right;
+	overflow: hidden;
+	padding-top: 0.25rem;
+}
+.wrap25 .diva dd a {
+	width: 1rem;
+	display: block;
+	overflow: hidden;
+}
+.wrap25 .diva dd img {
+	width: 0.14rem;
+	height: 0.25rem;
+	float: right;
+	overflow: hidden;
+}
+.wrap25 .divb {
+	width: 6rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap25 .divb ul {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+	margin: 0.3rem 0px;
+}
+.wrap25 .divb ul li {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	margin-right: 0.2rem;
+}
+.wrap25 .divb ul li dt {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap25 .divb ul li dt img {
+	width: 2.9rem;
+	height: 2.2rem;
+	float: left;
+	overflow: hidden;
+}
+.wrap25 .divb h2 {
+	width: 2.9rem;
+	height: 0.6rem;
+	background: #000;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	FILTER: alpha(opacity=60);
+	opacity: 0.6;
+}
+.wrap25 .divb dd {
+	width: 2.4rem;
+	height: 0.6rem;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	color: #FFF;
+	line-height: 0.6rem;
+	padding: 0rem 0.2rem;
+	font-size: 0.22rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+}
+.wrap25 .divb dd font {
+	color: #FFF;
+}
+/*wrap25*/
+
+
+
+
+/*wrap26*/
+.wrap26 {
+	width: 6.4rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+	border-bottom: #ebebeb solid 0.01rem;
+}
+.wrap26 .diva {
+	width: 6.4rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	line-height: 0.8rem;
+	background: #e5e5e5;
+	text-align: center;
+	font-size: 0.26rem;
+}
+.wrap26 .divb {
+	width: 6.4rem;
+	float: left;
+	overflow: hidden;
+	background: #fff;
+}
+.wrap26 .divb ul {
+	width: 6.5rem;
+	float: left;
+	overflow: hidden;
+	padding: 0.2rem 0rem;
+}
+.wrap26 .divb ul li {
+	width: 1.9rem;
+	height: 0.8rem;
+	float: left;
+	overflow: hidden;
+	background: #f5f5f5;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.22rem;
+	margin: 0.1rem 0rem 0.1rem 0.17rem;
+}
+.wrap26 .divb ul li a {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*wrap26*/

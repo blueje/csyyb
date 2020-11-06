@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<link href="/favicon.ico" rel="shortcut icon" />
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery.js"></script>
+<script type="text/javascript" src="/skin/js/jquery-1.11.0.min.js"></script>
+
+<!--导航-->
+<script type="text/javascript" src="/skin/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/jqlcm.js"></script>
+<!--导航-->
+
+<script type="text/javascript" src="/skin/js/jquery.superslide.2.1.js"></script>
+
+<!--选项卡-->
+<script>
+    function setTab(name,cursel,n){
+    for(i=1;i<=n;i++){
+    var menu=document.getElementById(name+i);
+    var con=document.getElementById("con_"+name+"_"+i);
+    menu.className=i==cursel?"listbtns":"";
+    con.style.display=i==cursel?"block":"none";
+    }}
+</script>
+<!--选项卡-->
+
+</head>
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+
+
+<body>
+<script type="text/javascript">
+  $(function () {
+    $(".top").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
+    $(".bottom").click(//定义返回顶部点击向上滚动的动画
+    function () {
+		//alert(document.body.clientHeight);
+      $('html,body').animate({ scrollTop: document.body.clientHeight }, 700);
+    });
+  })
+</script>
+{dede:include filename="header.htm"/}
+<div class="ind_dh">
+  <div class="ind_b_dh">
+    <div class="kxdh_i">快速找工业厂房
+      <ol class="kxdh_ol" style="display:block;">
+        <div class="kxdh_ol_div">
+          <h3><a href="#">热门区域</a></h3>
+          <ul class="kxdh_ol_div_ul">
+          {dede:channel type='son' typeid='1' }
+           <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+          {/dede:channel} 
+          </ul>
+        </div>
+        {dede:php} AddFilter(2,2,'jiagequjian'); {/dede:php}
+        {dede:php} AddFilter(2,2,'loupanleixing'); {/dede:php}
+      </ol>
+    </div>
+    <div class="mainMenuV"> 
+    
+    <a href="/" {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='active'":@me="";{/dede:field}>首页</a> 
+    {dede:channelartlist typeid='top' currentstyle='active'}
+    <a href="{dede:field name='typeurl'/}" class="{dede:field.currentstyle/}">{dede:field name='typename'/}</a>
+    {/dede:channelartlist} 
+    
+    </div>
+    <div class="selCity">
+      <div class="selBox">
+        <div id="txtbox" class="selTxt"><span>郑州市</span><em>切换</em></div>
+      </div>
+      <div id="optionbox" class="optionbox" style="display: none;">
+        <div> 
+        {dede:channel type='son' typeid='1' }
+        <span><a href="[field:typeurl/]">[field:typename/]</a></span> 
+        {/dede:channel}
+        <ins id="ico-city"></ins> </div>
+      </div>
+      <input type="hidden" id="selValue">
+    </div>
+    <script type="text/javascript" src="/skin/js/roll.js"></script> 
+  </div>
+</div>
+<div class="bn_box">
+  <div class="banner">
+    <div class="bd">
+      <ul>
+      {dede:myppt typeid='1' row='3'}
+        <li style="background:url([field:pic/]) center 0 no-repeat;"><a href="[field:url/]"></a></li>
+      {/dede:myppt}    
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">jQuery(".banner").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click" });</script> 
+</div>
+<div class="mainBrand">
+  <ul>
+      <li>{dede:myad name='index_1'/}</li>
+      <li>{dede:myad name='index_2'/}</li>
+      <li>{dede:myad name='index_3'/}</li>
+      <li>{dede:myad name='index_4'/}</li>
+      <li>{dede:myad name='index_5'/}</li>
+  </ul>
+</div>
+<div class="quickService"> <span><a href="tel:{dede:global.cfg_tels/}"><img src="/skin/img/ico5.png"/><em>在售厂房报价及折扣</em>实时更新</a></span> <span><a href="tel:{dede:global.cfg_tels/}"><img src="/skin/img/ico6.png"/><em>提交工业厂房需求</em>置业顾问帮您寻找优质厂房</a></span> <span><a href="tel:{dede:global.cfg_tels/}"><img src="/skin/img/ico7.png"/><em>国内联动，旅游看房</em>免费接机，独享优惠折扣</a></span> <span><a href="tel:{dede:global.cfg_tels/}"><img src="/skin/img/ico8.png"/><em>二十四小时在线咨询</em>点此开始电话咨询</a></span> </div>
+
+<div class="housebox">
+  <div class="houseleft">
+    <div class="houseleft_top">
+      <div class="houseleft_top_l"><a href="{dede:type typeid='1'}[field:typeurl/]{/dede:type}" target="_blank">新开楼盘</a></div>
+      <div class="houseleft_top_m"> 
+      
+      <span class="listbtns" id="T1" onmouseover="setTab('T',1,6)">{dede:type typeid='12'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T2" onmouseover="setTab('T',2,6)">{dede:type typeid='13'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T3" onmouseover="setTab('T',3,6)">{dede:type typeid='14'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T4" onmouseover="setTab('T',4,6)">{dede:type typeid='15'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T5" onmouseover="setTab('T',5,6)">{dede:type typeid='16'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T6" onmouseover="setTab('T',6,6)">{dede:type typeid='17'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      <span id="T7" onmouseover="setTab('T',7,6)">{dede:type typeid='18'}<a href="[field:typeurl/]">[field:typename/]楼盘</a>{/dede:type}</span> 
+      
+      </div>
+      <div class="houseleft_top_r"><a href="{dede:type typeid='1'}[field:typeurl/]{/dede:type}" target="_blank">更多</a></div>
+    </div>
+    <div class="houseleft_main">
+      <div id="con_T_1">
+        <ul>
+        {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='12'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_2" style="display:none;">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='13'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_3" style="display:none;">
+        <ul>
+        {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='14'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_4" style="display:none;">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='15'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_5" style="display:none;">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='16'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_6" style="display:none;">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='17'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      <div id="con_T_6" style="display:none;">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2' typeid='18'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+    </div>
+  </div>
+  {dede:channelartlist typeid='6,0'}      
+  <div class="houseright">
+    <div class="houseright_a" style=" background-color:#1970a9;"><span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span></div>
+    <div class="houseright_b"> <strong>郑州</strong> <span>
+      <iframe width="190" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=zhengzhou&num=2"></iframe>
+      </span>
+      <dl>
+        <dt>
+          <h2>今日热点</h2>
+          <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em></dt>
+         {dede:arclist titlelen=80 orderby ='pubdate' row='4'}    
+          <dd> <a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>48?cn_substr("@me",48)."…" : "@me" )'/]</a></dd>
+         {/dede:arclist}
+      </dl>
+    </div>
+  </div>
+ {/dede:channelartlist}  
+</div>
+
+<div class="housebox">
+{dede:channelartlist typeid='1,0'}
+  <div class="houseleft">
+    <div class="houseleft_top">
+      <div class="houseleft_top_l"><a href="{dede:field name='typeurl'/}" target="_blank">优惠团购</a></div>
+      <div class="houseleft_top_r"><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></div>
+    </div>
+    <div class="houseleft_main">
+      <div id="con_Ta_1">
+        <ul>
+        {dede:arclist titlelen=80 flag='f' orderby ='pubdate' row='3' addfields='junjia,qijia' channelid='2'}    
+          <li>
+            <p><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"></a></p>
+            <dl>
+              <dt><a href="[field:arcurl/]" target="_blank">[field:title/]</a><em>[<a href="[field:typeurl/]" target="_blank">[field:typename/]</a>]</em></dt>
+              <dd>开盘价：<em>[field:qijia/]</em>元/㎡</dd>
+              <dd>均价：<em>[field:junjia/]</em>元/㎡</dd>
+            </dl>
+            <div class="imgShop"> <span><a href="[field:arcurl/]" title="浏览" target="_blank" rel="nofollow"><em><img src="/skin/img/ico9.png"/></em>[field:click/]</a></span> <span><a href="http://wpa.qq.com/msgrd?v=3&site=[field:global.cfg_webname/]&menu=yes&uin=[field:global.cfg_kfqq/]" target="_blank" title="咨询"><em><img src="/skin/img/ico11.png"/></em>咨询</a></span> </div>
+          </li>
+         {/dede:arclist} 
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+   {/dede:channelartlist}  
+ {dede:channelartlist typeid='40,0'}
+  <div class="houseright">
+    <div class="houseright_a" style="background-color:#f9644e;"><span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span><em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em></div>
+    <div class="houseright_b">
+      <dl>
+         {dede:arclist titlelen=80 orderby ='pubdate' row='9'}    
+          <dd> <a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>48?cn_substr("@me",48)."…" : "@me" )'/]</a></dd>
+         {/dede:arclist}
+      </dl>
+    </div>
+  </div>
+  {/dede:channelartlist}   
+</div>
+
+
+
+<div class="newsbox">
+  <div class="newslist">
+  {dede:channelartlist typeid='3,0'}
+    <div class="newsleft">
+      <dt> <span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span> <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em> </dt>
+      <dd>
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='0,1'}    
+        <h2><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"><em>[field:fulltitle function=' ( strlen("@me")>42?cn_substr("@me",42)."…" : "@me" )'/]</em></a></h2>
+      {/dede:arclist} 
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='1,6'}     
+        <span><a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>50?cn_substr("@me",50)."…" : "@me" )'/]</a></span> 
+      {/dede:arclist}   
+      </dd>
+    </div>
+   {/dede:channelartlist}  
+   {dede:channelartlist typeid='4,0'}
+    <div class="newsleft">
+      <dt> <span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span> <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em> </dt>
+      <dd>
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='0,1'}    
+        <h2><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"><em>[field:fulltitle function=' ( strlen("@me")>42?cn_substr("@me",42)."…" : "@me" )'/]</em></a></h2>
+      {/dede:arclist} 
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='1,6'}     
+        <span><a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>50?cn_substr("@me",50)."…" : "@me" )'/]</a></span> 
+      {/dede:arclist}   
+      </dd>
+    </div>
+    {/dede:channelartlist}  
+    {dede:channelartlist typeid='5,0'}
+    <div class="newsleft">
+      <dt> <span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span> <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em> </dt>
+      <dd>
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='0,1'}    
+        <h2><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" width="287" height="187"><em>[field:fulltitle function=' ( strlen("@me")>42?cn_substr("@me",42)."…" : "@me" )'/]</em></a></h2>
+      {/dede:arclist} 
+      {dede:arclist titlelen=80 orderby ='pubdate' limit='1,6'}     
+        <span><a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>50?cn_substr("@me",50)."…" : "@me" )'/]</a></span> 
+      {/dede:arclist}   
+      </dd>
+    </div>
+    {/dede:channelartlist}  
+  </div>
+  <div class="newsright">
+   {dede:channelartlist typeid='6,0'}
+    <div class="newsright_a">
+      <dt> <span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span> <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em> </dt>
+      <dd> 
+      {dede:arclist titlelen=80 orderby ='pubdate' row='5'}     
+      <span> <a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>48?cn_substr("@me",48)."…" : "@me" )'/]</a></span> 
+      {/dede:arclist}   
+      </dd>
+    </div>
+   {/dede:channelartlist}  
+   {dede:channelartlist typeid='7,0'}
+    <div class="newsright_a" style="border:none;">
+      <dt> <span><a href="{dede:field name='typeurl'/}" target="_blank">{dede:field name='typename'/}</a></span> <em><a href="{dede:field name='typeurl'/}" target="_blank">更多</a></em> </dt>
+      <dd> 
+      {dede:arclist titlelen=80 orderby ='pubdate' row='5'}     
+      <span> <a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>48?cn_substr("@me",48)."…" : "@me" )'/]</a></span> 
+      {/dede:arclist}   
+      </dd>
+    </div>
+   {/dede:channelartlist}   
+  </div>
+</div>
+
+
+<div class="paihangbox">
+  <div class="paihangboxall">
+    <div class="paihang">
+      <dt>热销排行</dt>
+      <dd>
+        <ul>
+        {dede:arclist titlelen=80 orderby ='click' flag='c' row='10' addfields='junjia' channelid='2' typeid='1'}    
+          <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:junjia/]元/㎡</em></a></li>
+        {/dede:arclist}  
+        </ul>
+      </dd>
+    </div>
+    <div class="paihang mgl20">
+      <dt>最新优惠</dt>
+      <dd>
+        <ul>
+        {dede:arclist titlelen=80 orderby ='pubdate' flag='f' row='10' addfields='junjia' channelid='2' typeid='1'}    
+          <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:junjia/]元/㎡</em></a></li>
+        {/dede:arclist}  
+        </ul>
+      </dd>
+    </div>
+    <div class="paihang mgl20">
+      <dt>热门关注</dt>
+      <dd>
+        <ul>
+        {dede:arclist titlelen=80 orderby ='click' row='10' addfields='junjia' channelid='2' typeid='1'}    
+          <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:junjia/]元/㎡</em></a></li>
+        {/dede:arclist}  
+        </ul>
+      </dd>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

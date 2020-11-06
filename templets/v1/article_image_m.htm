@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/m/skin/css/common.css">
+
+<script src="/m/skin/js/jquery-2.0.3.min.js"></script>
+<script src="/m/skin/js/adaptive.js"></script>
+<script>
+	window['adaptive'].desinWidth = 640; // 设计图宽度 
+	window['adaptive'].baseFont = 100; // 没有缩放时的字体大小 
+	window['adaptive'].init(); // 调用初始化方法
+</script>
+
+<!--焦点图切换-->
+<link rel="stylesheet" href="/m/skin/css/swiper.min.css">
+<script src="/m/skin/js/swiper.min.js"></script>
+<!--焦点图切换-->
+
+<!--报名-->
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog-sally.css" />
+<script type="text/javascript" src="/m/skin/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/m/skin/js/classie.js"></script>
+<script type="text/javascript" src="/m/skin/js/dialogfx.js"></script>
+<!--报名-->
+
+<a href="#top" class="topbox"><img src="/m/skin/img/img34.png"/></a>
+<script type="text/javascript" src="/m/skin/js/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("a").smoothScroll();
+})
+</script>
+<script src="/m/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/jquery.superslide.2.1.js"></script>
+<link href="/m/skin/css/css.css" rel="stylesheet" type="text/css" />
+<!--图册-->
+<link href="/m/skin/css/photoswipe.css" rel="stylesheet" />
+<script src="/m/skin/js/simple-inheritance.min.js"></script>
+<script src="/m/skin/js/code-photoswipe-1.0.11.min.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+	Code.photoSwipe('a', '#Gallery');
+}, false);
+</script>
+
+
+<!--图册-->
+
+</head><body>
+<div class="wrap1">
+  <div class="diva">
+    <div class="sdivc"><a href="javascript:history.go(-1);"><em><img src="/m/skin/img/fanhui.png" /></em></a></div>
+    <div class="sdivb">{dede:field.title/}</div>
+    <div class="selCity">
+      <div class="selBox">
+        <div id="txtbox" class="selTxt"><img src="/m/skin/img/menu.png"/></div>
+      </div>
+      <div id="optionbox" class="optionbox" style="display: none;">
+        <ul>
+          <li><a href="/m"><img src="/m/skin/img/ico11.png"/><span>首页</span></a></li>
+          {dede:channelartlist typeid='1,2,29,35,36,0'}
+          <li><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/ico{dede:global.itemindex/}.png"/><span>{dede:field name='typename'/}</span></a></li>
+          {/dede:channelartlist} 
+        </ul>
+      </div>
+      <input type="hidden" id="selValue">
+    </div>
+    <script type="text/javascript" src="/m/skin/js/roll.js"></script> 
+  </div>
+</div>
+<div id="banner2" class="swiper-container-horizontal">
+  <div class="swiper-wrapper" style="transform:translate3d(-636px,0,0);transition-duration:0ms">
+  {dede:productimagelist}
+    <div class="swiper-slide" data-swiper-slide-index="0" style="width:6.4rem"> <a href="[field:imgsrc/]"><img src="[field:imgsrc/]"></a> </div>
+  {/dede:productimagelist}
+  </div>
+  <div class="pagination swiper-pagination-bullets"> <span class="swiper-pagination-bullet"></span> <span class="swiper-pagination-bullet"></span> <span class="swiper-pagination-bullet"></span> <span class="swiper-pagination-bullet"></span> <span class="swiper-pagination-bullet"></span> </div>
+</div>
+<script type="text/javascript">
+window.onload = function() {
+  var mySwiper2 = new Swiper('#banner2',{
+      autoplay:2500,
+      visibilityFullFit : true,
+      loop:true,
+      pagination : '.pagination',
+  });}
+</script>
+<div class="wrap8"> <span> {dede:field.loupanleixing/}</span></div>
+<div class="wrap7">
+  <div class="diva">均价：<span>{dede:field.junjia/}</span>元/㎡<b>在售</b></div>
+  <div class="diva">开盘价：<span>{dede:field.qijia/}</span>元/㎡</div>
+  <div class="diva">开盘时间：{dede:field.kaipantime function="MyDate('Y-m-d',@me)"/}</div>
+  <div class="diva">交房时间：{dede:field.jiaofangtime function="MyDate('Y-m-d',@me)"/}</div>
+  <div class="diva">楼盘地址：{dede:field.lopandizhi/}</div>
+  <div class="diva">户型：{dede:field.loupanleixing/} </div>
+  <div class="diva">优惠：{dede:field.tyouhui/}</div>
+</div>
+<div id="Gallery">
+<div class="wrap9">
+  <div class="diva">
+    <dt>户型图</dt>
+    
+  </div>
+  <div>
+    <ul>
+    {dede:field name='imgurls2'}
+      <div class="gallery-item"> <a href="[field:imgsrc/]"> <img src="[field:imgsrc/]" alt="[field:alttext /]" >
+        <div class="photo-title">[field:alttext /]</div>
+        </a> </div>
+    {/dede:field}  
+    </ul>
+  </div>
+</div>
+<div class="wrap9">
+  <div class="diva">
+    <dt>相册</dt>
+    
+  </div>
+  <div>
+    <ul>
+    {dede:field name='imgurls'}
+      <div class="gallery-item"> <a href="[field:imgsrc/]"> <img src="[field:imgsrc/]" alt="[field:alttext /]" >
+        <div class="photo-title">[field:alttext /]</div>
+        </a> </div>
+    {/dede:field}  
+    </ul>
+  </div>
+</div>
+</div>
+<div class="wrap10">
+  <div class="diva">
+    <dt>楼盘信息</dt>
+  </div>
+  <div class="divb">
+    <ul>
+      <li>
+        <h2>楼盘名称：</h2>
+        <span>{dede:field.title/}</span></li>
+      <li>
+        <h2>楼盘均价：</h2>
+        <span>{dede:field.junjia/}元/平方米</span></li>
+      <li>
+        <h2>所属区域：</h2>
+        <span>{dede:type}[field:typename/]{/dede:type}</span></li>
+      <li>
+        <h2>开&nbsp;&nbsp;发&nbsp;&nbsp;商：</h2>
+        <span>{dede:field.kaifaman/}</span></li>
+      <li>
+        <h2>装修情况：</h2>
+        <span>{dede:field.decoratexk/}</span></li>
+      <li>
+        <h2>物业公司：</h2>
+        <span>{dede:field.wuyegs/}</span></li>
+      <li>
+        <h2>物&nbsp;&nbsp;业&nbsp;&nbsp;费：</h2>
+        <span>{dede:field.wuyef/}</span></li>
+      <li>
+        <h2>规划面积：</h2>
+        <span>{dede:field.guihuaarea/}</span></li>
+      <li>
+        <h2>建筑面积：</h2>
+        <span>{dede:field.jianzhuarea/}</span></li>
+      <li>
+        <h2>总&nbsp;&nbsp;栋&nbsp;&nbsp;数：</h2>
+        <span>{dede:field.totalbuilding/}</span>
+      </li>
+      <li>
+        <h2>规划户数：</h2>
+        <span>{dede:field.guihuabuilding/}</span></li>
+      <li>
+        <h2>容&nbsp;&nbsp;积&nbsp;&nbsp;率：</h2>
+        <span>{dede:field.plotratio/}</span></li>
+      <li>
+        <h2>绿&nbsp;&nbsp;化&nbsp;&nbsp;率：</h2>
+        <span>{dede:field.lvhuarate/}</span></li>
+      <li>
+        <h2>预售证号：</h2>
+        <span>{dede:field.license/}</span>
+      </li>
+      <li>
+        <h2>公交路线：</h2>
+        <span>{dede:field.gongjiaolx/}</span></li>
+    </ul>
+  </div>
+  <div class="divc">
+    {dede:field.body/}
+  </div>
+</div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

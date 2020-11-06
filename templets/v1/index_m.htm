@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/m/skin/css/common.css">
+<script src="/m/skin/js/jquery-2.0.3.min.js"></script>
+<script src="/m/skin/js/adaptive.js"></script>
+<script>
+	window['adaptive'].desinWidth = 640; // 设计图宽度 
+	window['adaptive'].baseFont = 100; // 没有缩放时的字体大小 
+	window['adaptive'].init(); // 调用初始化方法
+</script>
+
+<!--焦点图切换-->
+<link rel="stylesheet" href="/m/skin/css/swiper.min.css">
+<script src="/m/skin/js/swiper.min.js"></script>
+<!--焦点图切换-->
+
+<!--报名-->
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog-sally.css" />
+<script type="text/javascript" src="/m/skin/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/m/skin/js/classie.js"></script>
+<script type="text/javascript" src="/m/skin/js/dialogfx.js"></script>
+<!--报名-->
+
+<a href="#top" class="topbox"><img src="/m/skin/img/img34.png"/></a>
+<script type="text/javascript" src="/m/skin/js/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("a").smoothScroll();
+})
+</script>
+<script src="/m/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/jquery.superslide.2.1.js"></script>
+<link href="/m/skin/css/css.css" rel="stylesheet" type="text/css" />
+</head><body>
+<div class="wrap1">
+  <div class="diva">
+    <div class="sdiva"><a href="#" data-dialog="somedialog"><span>{dede:type typeid='12'}[field:typename/]{/dede:type}</span><em><img src="/m/skin/img/ico120.png" /></em></a></div>
+    <div class="sdivb">{dede:global.cfg_webname/}</div>
+    <div class="selCity">
+      <div class="selBox">
+        <div id="txtbox" class="selTxt"><img src="/m/skin/img/menu.png"/></div>
+      </div>
+      <div id="optionbox" class="optionbox" style="display: none;">
+        <ul>
+          <li><a href="/m"><img src="/m/skin/img/ico11.png"/><span>首页</span></a></li>
+          {dede:channelartlist typeid='1,2,29,35,36,0'}
+          <li><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/ico{dede:global.itemindex/}.png"/><span>{dede:field name='typename'/}</span></a></li>
+          {/dede:channelartlist}
+        </ul>
+      </div>
+      <input type="hidden" id="selValue">
+    </div>
+    <script type="text/javascript" src="/m/skin/js/roll.js"></script> 
+  </div>
+  <div class="divb">
+    <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+      <input type="hidden" name="mobile" value="1" />
+      <input type="hidden" name="kwtype" value="0" />
+      <input type="hidden" name="do" value="2" />
+      <dt class="fl ml20">
+        <input type="text" name='q' id="q"  required="required" placeholder="请输入要搜索的工业厂房关键词" autocomplete="off" class="fl w divc_wbk">
+      </dt>
+      <input type="submit" value="" class="fl btna"/>
+    </form>
+  </div>
+</div>
+<div id="banner" class="swiper-container-horizontal">
+  <div class="swiper-wrapper" style="transform:translate3d(-636px,0,0);transition-duration:0ms"> {dede:myppt typeid='2' row='3'}
+    <div class="swiper-slide" data-swiper-slide-index="0" style="width:6.4rem"> <a href="[field:url/]"><img src="[field:pic/]"></a> </div>
+    {/dede:myppt} </div>
+  <div class="pagination swiper-pagination-bullets"> <span class="swiper-pagination-bullet"></span> </div>
+</div>
+<script type="text/javascript">
+window.onload = function() {
+  var mySwiper2 = new Swiper('#banner',{
+      autoplay:2500,
+      visibilityFullFit : true,
+      loop:true,
+      pagination : '.pagination',
+  });}
+</script> 
+
+<!--wrap2 start-->
+<div class="wrap2">
+  <ul>
+    {dede:channelartlist typeid='1,2,29,35,0'}
+    <li><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/ico{dede:global.itemindex/}.png"/><span>{dede:field name='typename'/}</span></a></li>
+    {/dede:channelartlist}
+  </ul>
+  <div class="diva">
+    <div class="sdiva"><img src="/m/skin/img/img30.png"/></div>
+    <div class="m_wnews">
+      <div id="miniNewsRegion"> {dede:arclist row='5' titlelen='80' flag='h' typeid='2'}
+        <dd><a href="view.php?aid=[field:id/]">[field:title/]</a></dd>
+        {/dede:arclist} </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
+        </script> 
+  </div>
+</div>
+<!--wrap2 end--> 
+
+<!--wrap25 start--> 
+{dede:channelartlist typeid='1,0'}
+<div class="wrap25">
+  <div class="diva">
+    <dt>团购活动</dt>
+    <dd><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/img121.png"/></a></dd>
+  </div>
+  <div class="divb">
+    <ul>
+      {dede:arclist row='2' flag='f' titlelen='80'}
+      <li> <a href="view.php?aid=[field:id/]">
+        <dt><img src="[field:picname/]"/></dt>
+        <h2></h2>
+        <dd>[field:title/]</dd>
+        </a> </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+{/dede:channelartlist} 
+<!--wrap25 start--> 
+
+<!--wrap26 start-->
+<div class="wrap26">
+  <div class="diva">区域找房</div>
+  {dede:channelartlist typeid='1,0'}
+  <div class="divb">
+    <ul>
+      {dede:channel type='son' row='5'}
+      <li><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+      {/dede:channel}
+      <li><a href="list.php?tid={dede:field name='id'/}">更多</a></li>
+    </ul>
+  </div>
+  {/dede:channelartlist} 
+  <!--<div class="diva">价格找房</div>
+  <div class="divb">
+    <ul>
+      <li> <a href="" >5000元以下</a></li>
+      <li> <a href="" >5000-8000元</a> </li>
+      <li> <a href="" >8000-12000元</a> </li>
+      <li> <a href="" >12000元以上</a> </li>
+      <li><a href="">更多</a></li>
+    </ul>
+  </div>--> 
+</div>
+<!--wrap26 start--> 
+
+<!--wrap3 start--> 
+{dede:channelartlist typeid='1,0'}
+<div class="wrap3">
+  <div class="diva">
+    <dt>优惠厂房</dt>
+    <dd><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/img121.png"/></a></dd>
+  </div>
+  <div class="divb">
+    <ul>
+      {dede:arclist row='8' orderby ='pubdate' titlelen='80' addfields='junjia,loupanleixing' channelid='2' }
+      <li> <a href="view.php?aid=[field:id/]">
+        <div class="sdiva">
+          <dt><img src="[field:picname/]"/></dt>
+          <h2></h2>
+          <dd>[field:junjia/]元/平米</dd>
+        </div>
+        <div class="sdivb">
+          <dt>[field:title/]</dt>
+          <dd><span>[field:loupanleixing/]</span> <span></span> </dd>
+        </div>
+        </a> </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <div class="divc"><a href="list.php?tid={dede:field name='id'/}">查看更多</a></div>
+</div>
+{/dede:channelartlist} 
+<!--wrap3 start--> 
+
+<!--wrap5 start--> 
+{dede:channelartlist typeid='4,0'}
+<div class="wrap5">
+  <div class="diva">
+    <dt>{dede:field name='typename'/}</dt>
+    <dd><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/img121.png"/></a></dd>
+  </div>
+  <div class="divb"> {dede:arclist row='3' orderby ='pubdate' titlelen='80'}
+    <div class="sdiva"> <a href="view.php?aid=[field:id/]">
+      <dt><img src="[field:picname/]"/></dt>
+      <dd>
+        <h2>[field:title/]</h2>
+        <h3>[field:description function="cn_substr(@me,80)"/]...</h3>
+        <h4>[field:pubdate function="MyDate('Y-m-d',@me)"/]</h4>
+      </dd>
+      </a> </div>
+    {/dede:arclist} </div>
+  <div class="divc"><a href="list.php?tid={dede:field name='id'/}">查看更多</a></div>
+</div>
+{/dede:channelartlist} 
+<!--wrap5 start--> 
+
+{dede:include filename="footer_m.htm"/}
+<div id="somedialog" class="dialog" style="z-index:9999">
+  <div class="dialog__overlay"></div>
+  <div class="dialog__content">
+    <div class="closea"><a href="#" data-dialog-close><img src="/m/skin/img/close.png"></a></div>
+    <div class="regist_quyu">
+      <ul>
+        {dede:channel type='son' typeid='1' currentstyle="
+        <li class='regist_quyu_on'><a href='~typelink~' >~typename~</a> </li>
+        " }
+        <li class="regist_quyu_on"><a href="list.php?tid=[field:id/]">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function() {
+  var dlgtrigger = document.querySelector( '[data-dialog]' ),
+	  somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+	  dlg = new DialogFx( somedialog );
+  dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/m/skin/css/common.css">
+
+<script src="/m/skin/js/jquery-2.0.3.min.js"></script>
+<script src="/m/skin/js/adaptive.js"></script>
+<script>
+	window['adaptive'].desinWidth = 640; // 设计图宽度 
+	window['adaptive'].baseFont = 100; // 没有缩放时的字体大小 
+	window['adaptive'].init(); // 调用初始化方法
+</script>
+
+<!--焦点图切换-->
+<link rel="stylesheet" href="/m/skin/css/swiper.min.css">
+<script src="/m/skin/js/swiper.min.js"></script>
+<!--焦点图切换-->
+
+<!--报名-->
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/dialog-sally.css" />
+<script type="text/javascript" src="/m/skin/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/m/skin/js/classie.js"></script>
+<script type="text/javascript" src="/m/skin/js/dialogfx.js"></script>
+<!--报名-->
+
+<a href="#top" class="topbox"><img src="/m/skin/img/img34.png"/></a>
+<script type="text/javascript" src="/m/skin/js/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("a").smoothScroll();
+})
+</script>
+<script src="/m/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/m/skin/js/jquery.superslide.2.1.js"></script>
+<link href="/m/skin/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="wrap1">
+  <div class="diva">
+    <div class="sdivc"><a href="javascript:history.go(-1);"><em><img src="/m/skin/img/fanhui.png" /></em></a></div>
+    <div class="sdivb">搜索 <strong class="fc_03c" style="color:#ff0000">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</div>
+    <div class="selCity">
+      <div class="selBox">
+        <div id="txtbox" class="selTxt"><img src="/m/skin/img/menu.png"/></div>
+      </div>
+      <div id="optionbox" class="optionbox" style="display: none;">
+        <ul>
+          <li><a href="/m"><img src="/m/skin/img/ico11.png"/><span>首页</span></a></li>
+          {dede:channelartlist typeid='1,2,29,35,36,0'}
+          <li><a href="list.php?tid={dede:field name='id'/}"><img src="/m/skin/img/ico{dede:global.itemindex/}.png"/><span>{dede:field name='typename'/}</span></a></li>
+          {/dede:channelartlist} 
+        </ul>
+      </div>
+      <input type="hidden" id="selValue">
+    </div>
+    <script type="text/javascript" src="/m/skin/js/roll.js"></script> 
+  </div>
+</div>
+
+
+<!--wrap5 start-->
+<div class="wrap5">
+  <div class="divb">
+   {dede:list pagesize='10'} 
+    <div class="sdiva"> <a href="view.php?aid=[field:id/]">
+      <dt><img src="[field:picname/]"/></dt>
+      <dd>
+        <h2>[field:title/]</h2>
+        <h3>[field:description function="cn_substr(@me,80)"/]...</h3>
+        <h4>[field:pubdate function="MyDate('Y.m.d',@me)"/]</h4>
+      </dd>
+      </a> </div>
+   {/dede:list}         
+  </div>
+</div>
+<!--wrap5 start--> 
+
+<!--翻页：开始----->
+<div class="digg2">{dede:pagelist listitem="pre,next,pageno,index,end" listsize="5"/}</div>
+<!--翻页：结束-----> 
+
+
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="windows-Target" contect="_top">
+<link href="/favicon.ico" rel="shortcut icon" />
+<link href="/skin/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	//搜索框
+	$("#cardname").addClass("cardnameV");
+	$("#cardname").focus(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	$("#cardname").keyup(function() {
+		$(this).removeClass("cardnameV");
+	})
+	$("#cardname").blur(function() {
+		if ($(this).val() != "") {
+			$(this).removeClass("cardnameV");
+		} else {
+			$(this).addClass("cardnameV");
+		}
+	})
+	
+	//导航
+	$(".mainProNav dl dt").mouseover(function() {
+		$(".mainProNav dl").removeClass("dlHover");
+		$(this).parent().addClass("dlHover");
+	})
+	$(".mainProNav").hover(function() {
+		$(this).addClass("mainProNavHover");
+	},function() {
+		$(this).removeClass("mainProNavHover");
+		$(".mainProNav dl").removeClass("dlHover");
+	})
+	
+});
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+  $(function () {
+    $(".top").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
+    $(".bottom").click(//定义返回顶部点击向上滚动的动画
+    function () {
+      $('html,body').animate({ scrollTop: document.body.clientHeight }, 700);
+    });
+  })
+</script>
+{dede:include filename="header.htm"/}
+
+<!--导航g--> 
+<script type="text/javascript" src="/skin/js/jquery.js"></script> 
+<script type="text/javascript" src="/skin/js/jcarousellite_1.0.1.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jqlcm.js"></script> 
+<!--导航e-->
+
+{dede:include filename="nav.htm"/}
+<div class="nynews">
+  <div class="nynewsA">
+    <div class="nynewsAleft"> {dede:field name='position'/} </div>
+    <div class="nynewsAright">
+      <form name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <input type="hidden" name="typeid" value="1">
+            <input type="hidden" name="kwtype" value="0" />
+        <span>
+        <input type="text" value="请输入楼盘名或楼盘地址" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';};" id="q" name="q" class="nynewsArightinput">
+        </span> <em>
+        <input type="submit" value="搜索" class="nynewsArightinput3" name="">
+        </em>
+      </form>
+    </div>
+  </div>
+  <div class="nynewsB mgt20"> 
+    <!--资讯左侧开始-->
+    <div class="nynewsBleft">
+      <div class="nynewsBleft_b">
+        <dd>
+          <ul>
+          {dede:list pagesize ='12'}
+            <li> <a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]"/><span>[field:fulltitle function=' ( strlen("@me")>40?cn_substr("@me",40)."…" : "@me" )'/]</span><em>[field:pubdate function="MyDate('Y-m-d',@me)"/]</em></a>
+              <p>[field:description function="cn_substr(@me,120)"/]...</p>
+            </li>
+          {/dede:list}    
+          </ul>
+        </dd>
+      </div>
+      
+      <!--翻页：开始----->
+      <div class="digg">{dede:pagelist listitem="pre,next,pageno,index,end" listsize="5"/}</div>
+      <!--翻页：结束-----> 
+      
+    </div>
+    <!--资讯左侧结束--> 
+    
+    <!--资讯右侧开始-->
+    <div class="nynewsBright">
+      <div class="nynewsBrightC">
+        <dt>阅读排行</dt>
+        <dd>
+          <ul>
+          {dede:arclist titlelen=80  orderby ='click' typeid='2'}    
+            <li><a href="[field:arcurl/]" target="_blank">[field:fulltitle function=' ( strlen("@me")>48?cn_substr("@me",48)."…" : "@me" )'/]</a></li>
+           {/dede:arclist} 
+          </ul>
+        </dd>
+      </div>
+      <div class="sideNewHouse">
+        <div class="sideNewHousedt"><img src="/skin/img/ico27.png"/>热销楼盘</div>
+        <div class="sideNewHousedd">
+          <ul>
+          {dede:arclist titlelen=80 orderby ='click' flag='c' row='10' addfields='junjia' channelid='2' typeid='1'}    
+            <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+          {/dede:arclist}    
+          </ul>
+        </div>
+      </div>
+      <div class="sideNewHouse mgb20">
+        <div class="sideNewHousedt"><img src="/skin/img/ico28.png"/>大家都在看</div>
+        <div class="sideNewHousedd">
+          <ul>
+            {dede:arclist titlelen=80 orderby ='click' row='10' addfields='junjia' channelid='2' typeid='1'}    
+            <li><a href="[field:arcurl/]" target="_blank"><span>[field:title/]</span><em>[field:typename/]</em><b>[field:junjia/]元/㎡</b></a></li>
+            {/dede:arclist}  
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!--资讯右侧结束--> 
+    
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
